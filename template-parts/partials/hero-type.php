@@ -3,26 +3,69 @@
  * Responsive columns for second section
  */
 ?>
+<div class="hero-contain">
+    <div class="hero-landing">
+            <h1>Wickham Media Solutions</h1>
+            <div class="animation-flex">
+                <h2>Digital Media</h2>
+                <h2>Web Development</h2>
+                <h2>Podcast Production</h2>
+            </div>
+            <div class="timeline-draw"></div>
+            <div class="free-consult">
+                <div>Book a free consultation:</div>
+                <div x-data="{ open: false }">
+                    <button x-on:click="open = ! open">Book Now</button>
+                    <div x-show="open" x-transition>
+                        <?php echo do_shortcode("[booking resource_id=1]"); ?>
+                    </div>
+                </div>
+            </div>
 
-<div class="hero-landing">
-		<h1>Wickham Media Solutions</h1>
-        <div class="animation-flex">
-            <h2>Digital Media</h2>
-            <h2>Web Development</h2>
-            <h2>Podcast Production</h2>
-        </div>
-        <div class="timeline-draw"></div>
-        <div class="free-consult">
-            <h4>Book Your Free Consultation</h4>
-            <button>Book Now</button>
-        </div>
-
+    </div>
 </div>
 
+
 <style>
+
+.free-consult {
+    padding: 1rem;
+    box-shadow: rgba(9, 30, 66, 0.25) 0px 4px 8px -2px, rgba(9, 30, 66, 0.08) 0px 0px 0px 1px;
+    text-align: center;
+    font-size: 1.2rem;
+}
+
+.free-consult button {
+    background-color: var(--bg-dark);
+    color: var(--font-light);
+    border: none;
+    padding: 1rem;
+    border-radius: 0.5rem;
+    font-size: 1.5rem;
+    margin: 0.5rem 0;
+}
+
+.free-consult button:hover {
+    background-color: var(--navy);
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.hero-contain{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    background-color: #cacaca;
+    /*color: var(--font-light);*/
+}
     
 .hero-landing {
-    min-height:400px;
+    min-height: 400px;
+    padding: 1rem 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 .hero-landing h1 {
     font-size: 4rem;
@@ -55,6 +98,7 @@
     display: flex;
     justify-content: center;
     gap: 1rem;
+    align-items: center;
 }
 
 .timeline-draw {
