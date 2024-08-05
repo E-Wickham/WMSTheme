@@ -38,8 +38,16 @@ h1 {
     font-size: 2rem;
 }
 
-.section-2 {
-    background-color: var(--navy);
+.section-3 {
+    background-color: var(--light-blue);
+}
+
+.section-3 h4 {
+    padding: 0 1rem;
+}
+.section-3 h3 {
+    text-align: center;
+    padding: 1rem;
 }
 
 .red-font {
@@ -484,8 +492,10 @@ article {
 }
 
 .about {
-    background-color: var(--off-white);
     padding: 1rem;
+    border: 1px solid black;
+    margin: 1rem 0;
+    animation: fadeInSlow 2.5s;
 }
 
 .about a {
@@ -514,6 +524,75 @@ article {
 	        animation: flip-in-hor-bottom 0.6s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
 }
 
+/* booking form */
+
+.wpbc_booking_form_simple {
+    display: flex;
+    gap: 2rem; 
+}
+
+.wpbc__form__div {
+    position: relative;
+    bottom: 1.3rem;
+}
+  
+.free-consult {
+    padding: 1rem;
+    box-shadow: rgba(9, 30, 66, 0.25) 0px 4px 8px -2px, rgba(9, 30, 66, 0.08) 0px 0px 0px 1px;
+    text-align: center;
+    font-size: 1.2rem;
+    background-color: #fff;
+    border-radius: 0.25rem;
+}
+
+.free-consult button, .free-consult .wpbc_container.wpbc_container_booking_form .wpbc_button_light, .free-consult .wpbc_container.wpbc_container_booking_form .wpbc_button_light:focus {
+    background-color: var(--bg-dark);
+    color: var(--font-light);
+    border: none;
+    padding: 1rem;
+    border-radius: 0.5rem;
+    font-size: 1.5rem;
+    margin: 0.5rem 0;
+    height: fit-content;
+    box-shadow: none;
+
+}
+
+.free-consult button:hover, .free-consult .wpbc_container.wpbc_container_booking_form .wpbc_button_light:hover {
+    background-color: var(--navy);
+    cursor: pointer;
+    transition: 0.3s;
+    height: fit-content;
+    padding: 1rem;
+    color: var(--font-light);
+    font-size: 1.5rem;
+    border:none;
+    box-shadow: none;
+    margin: 0.5rem 0;
+
+}
+
+/* Explainer sections */
+
+.section-3-exp {
+    display: flex;
+}
+
+.section-3-exp div {
+    flex: 50%;
+}
+
+.exp-img-plhr {
+    height: 210px;
+    width: 100%;    
+    background-color: black;
+    color: white;
+
+}
+.exp-img-plhr h4 {
+    margin: 0;
+}
+
 @-webkit-keyframes flip-in-hor-bottom {
     0% {
       -webkit-transform: rotateX(80deg);
@@ -538,6 +617,46 @@ article {
       opacity: 1;
     }
   }
+
+  @keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    50% {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    100% { 
+        opacity: 1;
+        transform: translateY(0px);
+    }
+  }
+
+@-webkit-keyframes fadeInSlow {
+    0% {
+      opacity: 0;
+    }
+    80% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+  @keyframes fadeInSlow {
+    0% {
+      opacity: 0;
+    }
+    80% {
+        opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+
+
+
 @media only screen and (max-width: 1200px) {
 
     .heroGrid {

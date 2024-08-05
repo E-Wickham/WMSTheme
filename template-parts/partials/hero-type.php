@@ -7,15 +7,20 @@
     <div class="hero-landing">
             <h1>Wickham Media Solutions</h1>
             <div class="animation-flex">
-                <h2>Digital Media</h2>
-                <h2>Web Development</h2>
                 <h2>Podcast Production</h2>
+                <div>/</div>
+                <h2>Web Development</h2>
+                <div>/</div>
+                <h2>News Products</h2>
             </div>
             <div class="timeline-draw"></div>
+            <div class="about">About Us</div>
+
             <div class="free-consult">
+
                 <div>Book a free consultation:</div>
                 <div x-data="{ open: false }">
-                    <button x-on:click="open = ! open">Book Now</button>
+                    <button x-on:click="open = ! open" x-show="!open">Book Now</button>
                     <div x-show="open" x-transition>
                         <?php echo do_shortcode("[booking resource_id=1]"); ?>
                     </div>
@@ -28,28 +33,6 @@
 
 <style>
 
-.free-consult {
-    padding: 1rem;
-    box-shadow: rgba(9, 30, 66, 0.25) 0px 4px 8px -2px, rgba(9, 30, 66, 0.08) 0px 0px 0px 1px;
-    text-align: center;
-    font-size: 1.2rem;
-}
-
-.free-consult button {
-    background-color: var(--bg-dark);
-    color: var(--font-light);
-    border: none;
-    padding: 1rem;
-    border-radius: 0.5rem;
-    font-size: 1.5rem;
-    margin: 0.5rem 0;
-}
-
-.free-consult button:hover {
-    background-color: var(--navy);
-    cursor: pointer;
-    transition: 0.3s;
-}
 
 .hero-contain{
     width: 100%;
@@ -93,6 +76,11 @@
     animation: fadeIn1 1.85s, forwards;
 }
 
+
+.animation-flex h2:hover {
+    text-decoration: underline;
+    cursor: pointer;
+}
 
 .animation-flex {
     display: flex;
