@@ -28,14 +28,14 @@
                     <div x-show="pod" x-transition>
                         <i class='bx bx-x-circle close-btn' @click="pod = ! pod"></i>
                         <div class="wwd-res-item">
-                            <img src="http://localhost:82/wp/wordpress-6.6.1/wordpress/wp-content/uploads/2024/08/podcast-8687965_1280.jpg" alt="Podcast">
+                            <img src="https://wickhammediasolutions.com/wp-content/uploads/2024/08/podcast-8687965_1280.jpg" alt="Podcast">
                             <div class="explainer">
                                 <h5>Podcasts</h5>
                                 <div>
                                     Reach new audiences with rich audio storytelling or impactful, insightful conversations with our podcast production team. 
                                 </div>
                                 <div>
-                                    <a class="aboutBtn" href="http://localhost:82/wp/wordpress-6.6.1/wordpress/podcast-production/">Read More</a>
+                                    <a class="aboutBtn" href="https://wickhammediasolutions.com/podcast-production/">Read More</a>
                                 </div>
                             </div>
                         </div>
@@ -43,14 +43,14 @@
                     <div x-show="webdev" x-transition>
                         <i class='bx bx-x-circle close-btn' @click="webdev = ! webdev"></i>
                         <div class="wwd-res-item">
-                            <img src="http://localhost:82/wp/wordpress-6.6.1/wordpress/wp-content/uploads/2024/08/computer-4795762_1920-1.jpg" alt="Web Development">
+                            <img src="https://wickhammediasolutions.com/wp-content/uploads/2024/08/programming-1873854_1280.png" alt="Web Development">
                             <div class="explainer">
                                 <h5>Web Development</h5>
                                 <div>
                                     Build a website to raise awareness, convert your audience into customers, or provide a new service with our web development team
                                 </div>
                                 <div>
-                                    <a class="aboutBtn" href="">Read More</a>
+                                    <a class="aboutBtn" href="https://wickhammediasolutions.com/web-development/">Read More</a>
                                 </div>
                             </div>
                         </div>
@@ -58,14 +58,14 @@
                     <div x-show="newsprod" x-transition>
                         <i class='bx bx-x-circle close-btn' @click="newsprod = ! newsprod"></i>
                         <div class="wwd-res-item">
-                            <img src="http://localhost:82/wp/wordpress-6.6.1/wordpress/wp-content/uploads/2024/08/coffee-1869772_1280.jpg" alt="Coffee">
+                            <img src="https://wickhammediasolutions.com/wp-content/uploads/2024/08/coffee-1869772_1280.jpg" alt="Coffee">
                             <div class="explainer">
                                 <h5>News Products</h5>
                                 <div>
                                     Create a new piece of infrastructure for your news team that will make you stick out from the crowd and keep your audience coming back to your site. 
                                 </div>
                                 <div>
-                                    <a class="aboutBtn" href="">Read More</a>
+                                    <a class="aboutBtn" href="https://wickhammediasolutions.com/news-products/">Read More</a>
                                 </div>
                             </div>
                         </div>

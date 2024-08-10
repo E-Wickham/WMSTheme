@@ -51,7 +51,7 @@
     width: 100%;
     display: flex;
     justify-content: center;
-    background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ),url(wp-content/uploads/2024/08/computer-4795762_1920.jpg);
+    background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ),url(https://wickhammediasolutions.com/wp-content/uploads/2024/08/computer-4795762_1920.jpg);
 
     color: var(--font-light);
 }
