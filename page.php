@@ -1,22 +1,25 @@
 <?php 
 /**
- * Template for all Pages on Farma website
+ * Default Template for Page on website
  */
 get_header();
+include('header2.php');
+
 ?>
-<div id="primary" class="content-area">
-    <main id="main" class="site-main">
-        <?php
-        while ( have_posts() ) :
-            the_post();
-            get_template_part( 'template-parts/page/content', 'page'); // content-page.php
-        
-            if ( comments_open() || get_comments_number() ) :
-                comments_template();
-            endif;
-        endwhile;
-        ?>
+ <div id="primary" class="single content-area">
+    <main id="main" class="single site-main">
+        <div class="single_page">
+            <?php
+            while ( have_posts() ) :
+                the_post();
+                get_template_part( 'template-parts/page/content', 'page'); // content-page.php
+            
+                if ( comments_open() || get_comments_number() ) :
+                    comments_template();
+                endif;
+            endwhile;
+            ?>
+        </div>
+
     </main>
 </div>
-<?php get_footer();
-?>

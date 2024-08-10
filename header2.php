@@ -20,19 +20,20 @@
         <?php wp_head(); ?>
         <script defer src="https://cdn.jsdelivr.net/npm/@alpinejs/intersect@3.x.x/dist/cdn.min.js"></script>
         <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
-        <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
-        <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 
     </head>
     <body <?php body_class();?> x-data>
     <nav>
-        <div class="navFlex" >
+        <div class="navFlex sidepage" >
 
-            <a href="#">
+        <a href="#">
                 <div class="title">
                     <!--replace this with new logo-->                   
+                    <img src="http://localhost:82/wp/wordpress-6.6.1/wordpress/wp-content/uploads/2024/08/cropped-TestLogo.png" alt="Wickham Media Solutions">
+                    <h1>Wickham Media Solutions</h1>
                 </div>
-            </a>
+        </a>
+
 
             <div x-data="{ open: false }" class="links">
                 <button @click="open = !open" class="menu-button">

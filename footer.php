@@ -5,5 +5,8 @@
 ?>
 
     <?php wp_footer(); ?>
+    <footer>
+        <?php echo '© Wickham Media Solutions '.date("Y"); ?>
+    </footer>
 </body>
 </html>
