@@ -7,17 +7,14 @@
     <div class="hero-landing">
             <h1>Wickham Media Solutions</h1>
             <div class="animation-flex">
-                <h2>Podcast Production</h2>
+                <h2 @click=podProd>Podcast Production</h2>
                 <div>/</div>
-                <h2>Web Development</h2>
+                <h2 @click=webDev>Web Development</h2>
                 <div>/</div>
-                <h2>News Products</h2>
+                <h2 @click=newsProd>News Products</h2>
             </div>
             <div class="timeline-draw"></div>
-            <div class="about">About Us</div>
-
             <div class="free-consult">
-
                 <div>Book a free consultation:</div>
                 <div x-data="{ open: false }">
                     <button x-on:click="open = ! open" x-show="!open">Book Now</button>
@@ -29,7 +26,23 @@
 
     </div>
 </div>
-
+<script>
+    function podProd() {
+        const elem = document.querySelector(".wwd-item.pod")
+        elem.scrollIntoView()
+        elem.click()
+    }
+    function webDev() {
+        const elem = document.querySelector(".wwd-item.web")
+        elem.scrollIntoView()
+        elem.click()
+    }
+    function newsProd() {
+        const elem = document.querySelector(".wwd-item.news")
+        elem.scrollIntoView()
+        elem.click()
+    }
+</script>
 
 <style>
 
@@ -38,12 +51,13 @@
     width: 100%;
     display: flex;
     justify-content: center;
-    background-color: #cacaca;
-    /*color: var(--font-light);*/
+    background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ),url(wp-content/uploads/2024/08/computer-4795762_1920.jpg);
+
+    color: var(--font-light);
 }
     
 .hero-landing {
-    min-height: 400px;
+    min-height: 375px;
     padding: 1rem 0;
     display: flex;
     flex-direction: column;
@@ -91,14 +105,28 @@
 
 .timeline-draw {
     width: 100%;
-    border-bottom: 2px solid black;
+    border-bottom: 2px solid #fff;
     position: relative;
     animation: lineDrawToRight 2s, slideDown 2.8s forwards;
 }
 
 .free-consult {
     animation: consultFadeIn 2.9s forwards;
+    color: var(--font-dark);
 }
+
+@media only screen and (max-width: 768px) {
+    .hero-landing h1 {
+        font-size: 1.5rem;
+        animation: fadeIn 0.5s;
+        border-right: none;
+        margin: 0.95rem 1rem 2.175rem 2rem;      
+    }
+    .animation-flex {
+        display: none;
+    }
+}
+
 
 /* The typing effect */
 @keyframes typing {
