@@ -26,7 +26,7 @@
     <nav>
         <div class="navFlex sidepage" >
 
-        <a href="#">
+        <a href="https://wickhammediasolutions.com">
                 <div class="title">
                     <!--replace this with new logo-->                   
                     <img src="http://localhost:82/wp/wordpress-6.6.1/wordpress/wp-content/uploads/2024/08/cropped-TestLogo.png" alt="Wickham Media Solutions">
@@ -56,72 +56,3 @@
           
     </nav>
 
-
-    <style>
-
-        .menu-button{
-            float:right;
-        }
-        .menuList-reg {
-            display: flex;
-            gap: 1rem;
-        }
-        .menuList {
-            display: flex;
-            flex-direction: column;
-            gap: 0.5rem;
-        }
-        .menuList a, .menuList div {
-            min-height: 20px;
-            min-width: 200px;
-            width: 200px;
-            display: block;
-            color: black;
-            padding: 0.25rem;
-        }
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        .menutransition {
-            animation: showMenu 0.5s;
-        }
-
-        @keyframes showMenu {
-            from {opacity: 0;}
-            to {opacity: 1;}
-        }
-
-
-        .menu-links {
-            display: flex;
-            flex-direction: column;
-            display: none;
-        }
-
-        .menu-links a {
-            border-top: 1px solid #444;
-        }
-
-        @media (min-width: 600px) {
-            .menu-links {
-                display: flex;
-                flex-direction: row;
-                align-items: center;
-            }
-
-            .menu-links a {
-                border-top: none;
-            }
-
-
-        }
-
-
-        .menuList.show {
-            visibility:visible;
-        }
-    </style>

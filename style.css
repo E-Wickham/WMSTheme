@@ -59,21 +59,21 @@ h1 {
     padding: 1rem;
 }
 
-.section-test #sp-testimonial-free-wrapper-39 .sp-testimonial-free-section .testimonial-nav-arrow {
+.section-test #sp-testimonial-free-wrapper-20 .sp-testimonial-free-section .testimonial-nav-arrow {
     border-radius: 50%;
     height: 2rem;
 
 }
-.section-test #sp-testimonial-free-wrapper-39 .sp-testimonial-free-section .testimonial-nav-arrow .fa.fa-angle-right {
+.section-test #sp-testimonial-free-wrapper-20 .sp-testimonial-free-section .testimonial-nav-arrow .fa.fa-angle-right {
     position:relative;
     left: 1px;
 }
-.section-test #sp-testimonial-free-wrapper-39 .sp-testimonial-free-section .testimonial-nav-arrow .fa.fa-angle-left {
+.section-test #sp-testimonial-free-wrapper-20 .sp-testimonial-free-section .testimonial-nav-arrow .fa.fa-angle-left {
     position:relative;
     right: 1px;
 }
 
-.section-test #sp-testimonial-free-wrapper-39{
+.section-test #sp-testimonial-free-wrapper-20{
     max-width: 500px;
     margin: auto;
 }
@@ -116,6 +116,7 @@ h1 {
     box-shadow: rgba(9, 30, 66, 0.25) 0px 4px 8px -2px, rgba(9, 30, 66, 0.08) 0px 0px 0px 1px;
     background-color: var(--bg-dark);
     width: 100%;
+    position: relative;
 }
 
 .navFlex a {
@@ -958,6 +959,76 @@ div.free-consult button:hover,
   }
 
 
+
+/* Mini Menu */ 
+.menu-button{
+    float:right;
+}
+.menuList-reg {
+    display: flex;
+    gap: 1rem;
+}
+.menuList {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+.menuList a, .menuList div {
+    min-height: 20px;
+    min-width: 200px;
+    width: fit-content;
+    display: block;
+    color: black;
+    padding: 0.25rem;
+    white-space: nowrap;
+}
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.menutransition {
+    animation: showMenu 0.5s;
+}
+
+@keyframes showMenu {
+    from {opacity: 0;}
+    to {opacity: 1;}
+}
+
+
+.menu-links {
+    display: flex;
+    flex-direction: column;
+    display: none;
+}
+
+.menu-links a {
+    border-top: 1px solid #444;
+}
+
+@media (min-width: 600px) {
+    .menu-links {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+    }
+
+    .menu-links a {
+        border-top: none;
+    }
+
+
+}
+
+
+.menuList.show {
+    visibility:visible;
+}
+
+
 @media only screen and (max-width: 1200px) {
 
     .single-entry-grid {
@@ -1060,7 +1131,7 @@ div.free-consult button:hover,
         transition: 0.3s top ease-in-out;
         border: 2px solid #dadada;
         font-size: 1.75rem;
-        top: 120px;
+        top: 70px;
         border-radius: 0.25rem;
     }
     .menuList li {
@@ -1069,8 +1140,11 @@ div.free-consult button:hover,
         width: 100%;
         text-align: center;
     }
-    .menuList div:hover {
-        background-color: #dadada;
+    .menuList a {
+        width: 100%;
+    }
+    .menuList a:hover {
+        text-decoration: underline;
     }
     .menuList ul {
         display: flex;

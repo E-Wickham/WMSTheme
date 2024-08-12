@@ -27,100 +27,30 @@
     <body <?php body_class();?> x-data>
     <nav>
         <div class="navFlex" >
-
             <a href="#">
                 <div class="title">
                     <!--replace this with new logo-->                   
                 </div>
             </a>
-
             <div x-data="{ open: false }" class="links">
                 <button @click="open = !open" class="menu-button">
                     <i x-show="open" class='bx bxs-x-square'></i>
                     <i x-show="!open" class='bx bx-menu'></i>
                 </button>
                 <div x-show="open" class="menuList" x-transition>
-                    <a href="#"><div class="link"><i class='bx bxl-facebook-circle'></i></div></a>
-                    <a href="#"><div class="link"><i class='bx bxl-instagram' ></i></div></a>
-
+                    <a href="https://wickhammediasolutions.com/wpbc-booking/"><div class="link-reg">Booking Calendar</div></a>
+                    <a href="https://wickhammediasolutions.com/category/portfolio"><div class="link-reg">Portfolio</div></a>
                 </div>
                 <div x-show="!open" class="menuList-reg" x-transition>
-                    <a href="#"><div class="link-reg">Members</div></a>
-                    <a href="#"><div class="link-reg"><i class='bx bxl-facebook-circle'></i></div></a>
-                    <a href="#"><div class="link-reg"><i class='bx bxl-instagram' ></i></div></a>
-
+                    <a href="https://wickhammediasolutions.com/wpbc-booking/"><div class="link-reg">Booking Calendar</div></a>
+                    <a href="https://wickhammediasolutions.com/category/portfolio"><div class="link-reg">Portfolio</div></a>
                 </div>
             </div>
         </div>  
-          
     </nav>
 
 
     <style>
 
-        .menu-button{
-            float:right;
-        }
-        .menuList-reg {
-            display: flex;
-            gap: 1rem;
-        }
-        .menuList {
-            display: flex;
-            flex-direction: column;
-            gap: 0.5rem;
-        }
-        .menuList a, .menuList div {
-            min-height: 20px;
-            min-width: 200px;
-            width: 200px;
-            display: block;
-            color: black;
-            padding: 0.25rem;
-        }
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
 
-        .menutransition {
-            animation: showMenu 0.5s;
-        }
-
-        @keyframes showMenu {
-            from {opacity: 0;}
-            to {opacity: 1;}
-        }
-
-
-        .menu-links {
-            display: flex;
-            flex-direction: column;
-            display: none;
-        }
-
-        .menu-links a {
-            border-top: 1px solid #444;
-        }
-
-        @media (min-width: 600px) {
-            .menu-links {
-                display: flex;
-                flex-direction: row;
-                align-items: center;
-            }
-
-            .menu-links a {
-                border-top: none;
-            }
-
-
-        }
-
-
-        .menuList.show {
-            visibility:visible;
-        }
     </style>

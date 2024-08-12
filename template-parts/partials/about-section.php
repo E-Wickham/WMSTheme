@@ -3,7 +3,7 @@
             <div class="aboutFlex">
                 <div class="aboutImg"></div>
                 <div class="aboutLogin" x-data="{ active: false }">
-                    <a href="#">
+                    
                         <h3>About Us</h3>
                         <div class="loginBtn hidden" @click="active = !active"> About 
 
@@ -30,7 +30,7 @@
 
                         </div>
                     </div>
-                    </a>
+
                 </div>
             </div>
         </div>   
