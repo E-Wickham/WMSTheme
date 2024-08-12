@@ -21,7 +21,8 @@
         <!-- TESTIMONIAL SECTION -->
         <h3 class="section-test-heading">Testimonials</h3>
         <div class="section-test">
-             <?php echo do_shortcode("[sp_testimonial id='39']"); ?>
+            <!-- Testimonial ID 20 -->
+             <?php echo do_shortcode("[sp_testimonial id='20']"); ?>
 
         </div>
         <!-- WHAT WE DO-->
