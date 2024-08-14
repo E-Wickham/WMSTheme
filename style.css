@@ -376,13 +376,27 @@ h3.news-category {
     align-items: center;
 }
 
-.moreBtn, .loginBtn {
+.moreBtn, .loginBtn, .project-link {
     padding: 1rem;
     border: 1px solid #cacaca;
     margin: 1rem auto;
     width: fit-content;
     border-radius: 0.25rem;
     background-color: #fff;
+    text-decoration: none;
+}
+.project-link {
+    margin: 0;
+    color: var(--font-dark);
+    font-weight: 700;
+    padding: 0.5rem;
+}
+
+.date-and-link{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 1rem;
 }
 
 .moreBtn:hover {
@@ -861,7 +875,7 @@ article, .single-entry-content {
     transition: 0.2s;
 }
 
-.loginBtn, .free-consult button, .aboutBtn {
+.loginBtn, .free-consult button, .aboutBtn, .project-link {
     transition: 0.4s;
 }
 
@@ -882,7 +896,8 @@ div.free-consult button:hover,
 .free-consult button:hover,
 .free-consult button:focus,
 .free-consult .wpbc_container.wpbc_container_booking_form .wpbc_button_light:hover,
-.aboutBtn:hover {
+.aboutBtn:hover,
+.project-link:hover {
     color: #fff;
     box-shadow: inset 11.5rem 0 0 0 var(--navy);
     cursor: pointer;

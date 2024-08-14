@@ -39,11 +39,11 @@
                 </button>
                 <div x-show="open" class="menuList" x-transition>
                     <a href="https://wickhammediasolutions.com/wpbc-booking/"><div class="link-reg">Booking Calendar</div></a>
-                    <a href="https://wickhammediasolutions.com/category/portfolio"><div class="link-reg">Portfolio</div></a>
+                    <a href="https://wickhammediasolutions.com/portfolio-page/"><div class="link-reg">Portfolio</div></a>
                 </div>
                 <div x-show="!open" class="menuList-reg" x-transition>
                     <a href="https://wickhammediasolutions.com/wpbc-booking/"><div class="link-reg">Booking Calendar</div></a>
-                    <a href="https://wickhammediasolutions.com/category/portfolio"><div class="link-reg">Portfolio</div></a>
+                    <a href="https://wickhammediasolutions.com/portfolio-page/"><div class="link-reg">Portfolio</div></a>
                 </div>
             </div>
         </div>  

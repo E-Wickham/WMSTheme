@@ -3,6 +3,10 @@
  * Template part for displaying single post.
  */
 
+$postID = get_the_ID();
+
+$proj_url = get_field('project_link');
+
 
 ?>
 
@@ -17,11 +21,18 @@
                 <?php
                     the_title(' <h1 class="entry-title">', '</h1>' );
                 ?>
-                <h4 class="entry-date">
-                <?php
-                    $post_date = get_the_date( 'D F j, Y' ); echo $post_date;
-                ?>
-                </h4>
+                <div class="date-and-link">
+                    <h4 class="entry-date">
+                        <?php
+                            $post_date = get_the_date( 'D F j, Y' ); echo $post_date;
+                        ?>
+                    </h4>
+                    <?php 
+                    if ($proj_url) { ?>
+                        <a class="project-link" href=<?php echo $proj_url;?> target="_blank">See project</a>
+                    <?php } ?>
+                </div>
+
             </header>
             <div class="single-entry-grid">
                 <div class="single-grid-1">
@@ -34,11 +45,14 @@
 
                     <?php the_content(); ?>
                 </div>
+                <?php 
+                ?>
                 <div class="single-grid-2">
-                    <h4>Latest News</h4>
+                    <h4>Featured Work</h4>
                     <?php
+                    
                         // The Query.
-                        $the_query = new WP_Query( array( 'posts_per_page' => 8, 'offset' => 0) );
+                        $the_query = new WP_Query( array( 'posts_per_page' => 3, 'offset' => 0) );
 
                         // The Loop.
                         if ( $the_query->have_posts() ) {
