@@ -29,7 +29,6 @@
         <a href="https://wickhammediasolutions.com">
                 <div class="title">
                     <!--replace this with new logo-->                   
-                    <img src="http://localhost:82/wp/wordpress-6.6.1/wordpress/wp-content/uploads/2024/08/cropped-TestLogo.png" alt="Wickham Media Solutions">
                     <h1>Wickham Media Solutions</h1>
                 </div>
         </a>
@@ -65,23 +64,4 @@
         width: unset;
     }
  </style>
- <script>
-        // simple vanilla js fix to the nav menu
-        const menuList = document.querySelector('.menuList');
-        const menuListReg = document.querySelector('.menuList-reg');
 
-        // Function to handle the resize event
-        function handleResize() {
-        if (window.innerWidth > 768) {
-            menuList.style.display = 'none';
-            menuListReg.style.display = 'flex';
-        } else {
-            //menuList.style.display = 'flex';
-            menuListReg.style.display = 'none';
-        }
-        }
-
-        // resize event listener
-        window.addEventListener('resize', handleResize);
-
-    </script>

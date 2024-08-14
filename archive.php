@@ -3,6 +3,8 @@
  * Template for all Pages on Farma website
  */
 get_header();
+include('header2.php');
+
 ?>
 <div id="primary" class="content-area">
     <main id="main" class="site-main">

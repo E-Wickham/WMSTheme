@@ -4,7 +4,7 @@
  */
 
  get_header();
- include('header2.php')
+ include('header2.php');
  ?>
  <div id="primary" class="single content-area">
     <main id="main" class="single site-main">
@@ -22,16 +22,7 @@
     </main>
     <?php /*get_sidebar() */?>
  </div>
- <style>
- .menuList-reg {
-    display: none;
- }
 
- .sidepage .menuList-reg {
-    display: flex;
-    width: unset;
- }
- </style>
  <?php
  get_footer();
 
