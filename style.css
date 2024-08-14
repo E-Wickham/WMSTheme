@@ -557,8 +557,15 @@ footer {
 .entry-header {
     padding: 0.5rem 1rem;
 }
+
 .entry-header .entry-title, .entry-header .entry-date {
     text-align: left;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    line-clamp: 2;
+    -webkit-box-orient: vertical;
 }
 
 .miniMenu {
@@ -733,6 +740,8 @@ article, .single-entry-content {
     font-size: 1.2rem;
     background-color: #fff;
     border-radius: 0.25rem;
+    margin-top: 1.5rem;
+
 }
 
 .free-consult button, .free-consult .wpbc_container.wpbc_container_booking_form .wpbc_button_light, .free-consult .wpbc_container.wpbc_container_booking_form .wpbc_button_light:focus {

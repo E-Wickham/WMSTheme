@@ -41,18 +41,47 @@
                     <i x-show="!open" class='bx bx-menu'></i>
                 </button>
                 <div x-show="open" class="menuList" x-transition>
-                    <a href="#"><div class="link"><i class='bx bxl-facebook-circle'></i></div></a>
-                    <a href="#"><div class="link"><i class='bx bxl-instagram' ></i></div></a>
-
+                    <a href="https://wickhammediasolutions.com/wpbc-booking/"><div class="link-reg">Booking Calendar</div></a>
+                    <a href="https://wickhammediasolutions.com/category/portfolio"><div class="link-reg">Portfolio</div></a>
                 </div>
                 <div x-show="!open" class="menuList-reg" x-transition>
-                    <a href="#"><div class="link-reg">Members</div></a>
-                    <a href="#"><div class="link-reg"><i class='bx bxl-facebook-circle'></i></div></a>
-                    <a href="#"><div class="link-reg"><i class='bx bxl-instagram' ></i></div></a>
-
+                    <a href="https://wickhammediasolutions.com/wpbc-booking/"><div class="link-reg">Booking Calendar</div></a>
+                    <a href="https://wickhammediasolutions.com/category/portfolio"><div class="link-reg">Portfolio</div></a>
                 </div>
             </div>
         </div>  
           
     </nav>
+<style>
+    .menuList-reg {
+        display: none;
+    }
 
+    .sidepage .menuList-reg {
+        display: flex;
+    }
+
+    .navFlex.sidepage {
+        width: unset;
+    }
+ </style>
+ <script>
+        // simple vanilla js fix to the nav menu
+        const menuList = document.querySelector('.menuList');
+        const menuListReg = document.querySelector('.menuList-reg');
+
+        // Function to handle the resize event
+        function handleResize() {
+        if (window.innerWidth > 768) {
+            menuList.style.display = 'none';
+            menuListReg.style.display = 'flex';
+        } else {
+            //menuList.style.display = 'flex';
+            menuListReg.style.display = 'none';
+        }
+        }
+
+        // resize event listener
+        window.addEventListener('resize', handleResize);
+
+    </script>
