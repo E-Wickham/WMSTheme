@@ -76,7 +76,7 @@
     animation: 
         typing 1.2s steps(20, end),
         blink-caret 1s step-end infinite;
-    
+    margin-top: 2rem;
 }
 
 .hero-landing h2:nth-of-type(1) {
@@ -190,12 +190,12 @@
 
     }
     90%{
-        transform: translateY(150px);
+        transform: translateY(160px);
         opacity: 1;
 
     }
     100% {
-        transform: translateY(150px);
+        transform: translateY(160px);
         opacity: 0;
 
     }
