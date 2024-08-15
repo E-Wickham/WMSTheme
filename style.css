@@ -653,6 +653,10 @@ article, .single-entry-content {
     background-color: #f7f8fd;
 }
 
+.portfolio-page-content .single-entry-content{
+    max-width: 1000px;
+}
+
 .heroGrid article:hover, .category-posts article:hover, .archive-posts a:hover {
     filter: brightness(0.9);
     transition: filter 0.4s;
