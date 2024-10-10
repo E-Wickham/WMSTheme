@@ -55,14 +55,14 @@
                         <span class="cat-links">
                             <?php
                                 $post_categories = wp_get_post_categories( $post_id );
-                                echo '<span class="date">'.$poststamp.'</span><h6 class="post_author red-font">';
-                                    the_author();
-                                echo '</h6>';
+                                //echo '<span class="date">'.$poststamp.'</span><h6 class="post_author red-font">';
+                                    //the_author();
+                                //echo '</h6>';
                                 //CATEGORY NAMES INCLUDED
-                                foreach($post_categories as $cat) {
-                                    $catname = get_cat_name($cat);
+                                //foreach($post_categories as $cat) {
+                                    //$catname = get_cat_name($cat);
                                     //echo '<a class="category-color-'.$cat.'" href="'. esc_url(get_category_link($cat)) .'">'.$catname.'</a>';
-                                };
+                                //};
                                 
 
                                 ?>

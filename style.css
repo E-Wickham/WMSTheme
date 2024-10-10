@@ -21,7 +21,11 @@ Author URI:
     --off-white: #d7d9ce;
     --red: #f24236;
     --lightest-blue: #f7f8fd;
-    
+    --tinted: rgba(0,0,0,0.7);
+
+    /* Fonts */
+    --body-font: 'Lato';
+    --heading-font: 'Lato';
 }
 
 body {
@@ -87,6 +91,11 @@ h1 {
     flex-direction: column;
     align-items: center;
 
+}
+
+.site-content {
+    position: relative;
+    z-index: 3;
 }
 
 .navFlex {
@@ -440,37 +449,50 @@ h3.news-category {
     margin: auto;
     transition: 0.4s;
     font-size: 1.2rem;
+    margin-bottom: 1rem;
+    font-family:var(--body-font);
 }
 .about-ctn.active {
     animation: grow 0.5s forwards;
     border: 1px solid #cacaca;
-    padding: 1rem;
     border-radius: 0.25rem;
+    min-height: fit-content;
+    background-color: var(--tinted);
 }
 .about-ctn.hidden {
     height: 0;
 }
+.about-ctn.active .about-ctn-text {
+    margin: 2rem 0 1rem 0;
+    padding: 0 1rem;
+    transition: 0.4s height;
+}
+
 .about-section1,
 .about-section2,
 .about-section3, 
 .about-section4,
-.about-section5
+.about-section5,
+.about-section6,
+.about-section7
  {
     visibility: hidden;
     color: #fff;
     z-index: 3;
-    position: relative;
+    /*position: relative;*/
+    transition-property: top, bottom;
+    transition-duration: 0.4s, 0.4s;
 }
 
 .about-section2 p,
 .about-section3 p,
 .about-section4 p,
-.about-section5 p {
+.about-section5 p,
+.about-section6 p {
     margin: 0;
 }
 
-.about-section1 p,
-.about-section4 p {
+.about-section1 p {
     margin-bottom: 0.5rem;
     margin-block-start: 0;
 }
@@ -479,26 +501,34 @@ h3.news-category {
 .about-section2.active,
 .about-section3.active, 
 .about-section4.active, 
-.about-section5.active {
+.about-section5.active, 
+.about-section6.active, 
+.about-section7.active {
     width: 100%;
     white-space:nowrap;
     margin:0;
     overflow: hidden; /* Ensures the content is not revealed until the animation */
     white-space: nowrap; /* Keeps the content on a single line */
-    animation: typing1 2s steps(50, end) forwards;
-    color: var(--font-dark);
+    animation: typing1 1.5s steps(50, end) forwards;
+    color: var(--font-light);
 }
 .about-section2.active {
     animation-delay: 1.5s;
 }
 .about-section3.active {
-    animation-delay: 3.5s;
+    animation-delay: 3s;
 }
 .about-section4.active {
-    animation-delay: 5.5s;
+    animation-delay: 4.5s;
 }
 .about-section5.active {
-    animation-delay: 7s;
+    animation-delay: 6s;
+}
+.about-section6.active {
+    animation-delay: 7.5s;
+}
+.about-section7.active {
+    animation-delay: 8.6s;
 }
 
 .explainer h5 {
@@ -529,6 +559,11 @@ footer {
 /* SINGLE PAGE */
 
 /*08 08 2024*/
+
+main.single {
+    padding: 1rem;
+}
+
 .single_page article {
     background: #fff;
 }
@@ -721,6 +756,22 @@ article, .single-entry-content {
     background-color: #fdc45b;
 }
 
+.we-do-ctn {
+    display: flex;
+    gap: 0.5rem;
+}
+
+.we-do-ctn a {
+    text-decoration: none;
+    color: var(--font-dark);
+    font-weight: 500;
+}
+
+.we-do-post {
+    border: 1px solid #cacaca;
+    padding: 1rem;
+    background-color:var(--light-blue)
+}
 .about a {
     color: var(--font-dark);
     text-decoration: none;
@@ -754,27 +805,46 @@ article, .single-entry-content {
     position: relative;
     bottom: 1.3rem;
 }
+
+.button-flex {
+    display: flex;
+    gap: 1rem;
+}
   
 .free-consult {
-    padding: 1rem;
-    box-shadow: rgba(9, 30, 66, 0.25) 0px 4px 8px -2px, rgba(9, 30, 66, 0.08) 0px 0px 0px 1px;
+    /*box-shadow: rgba(9, 30, 66, 0.25) 0px 4px 8px -2px, rgba(9, 30, 66, 0.08) 0px 0px 0px 1px;
+    */
     text-align: center;
-    font-size: 1.2rem;
-    background-color: #fff;
-    border-radius: 0.25rem;
-    margin-top: 1.5rem;
+    font-size: 1rem;
+    color: var(--font-light);
+    animation: consultFadeIn 2.9s forwards;
 }
 
-.free-consult button, .free-consult .wpbc_container.wpbc_container_booking_form .wpbc_button_light, .free-consult .wpbc_container.wpbc_container_booking_form .wpbc_button_light:focus {
-    background-color: var(--bg-dark);
+.free-consult div button {
+    margin-bottom: 0;
+}
+
+.free-consult i {
+    position: relative;
+    right: 0.5rem;
+    color: var(--font-dark);
+}
+
+.free-consult .about-ctn i {
     color: var(--font-light);
-    border: none;
+}
+
+.free-consult div.loginBtn, .free-consult button, .free-consult .wpbc_container.wpbc_container_booking_form .wpbc_button_light, .free-consult .wpbc_container.wpbc_container_booking_form .wpbc_button_light:focus {
+    background-color: var(--tinted);
+    color: var(--font-light);
+    border: 1px solid #cacaca;
     padding: 1rem;
     border-radius: 0.5rem;
-    font-size: 1.5rem;
+    font-size: 1.2rem;
     margin: 0.5rem 0;
     height: fit-content;
     box-shadow: none;
+    font-family: "Lato";
 }
 
 .free-consult .wpbc_container.wpbc_container_booking_form .wpbc_button_light:hover {
@@ -784,16 +854,24 @@ article, .single-entry-content {
     height: fit-content;
     padding: 1rem;
     color: var(--font-light);
-    font-size: 1.5rem;
-    border:none;
+    font-size: 1.2rem;
+    border: 1px solid #cacaca;
     box-shadow: none;
     margin: 0.5rem 0;
+}
+
+.consult-div {
+    background-color: rgba(255,255,255,0.9);
+    padding: 1rem;
+    border-radius: 0.25rem;
+    color: var(--font-dark);
 }
 
 /* WHAT WE DO */
 
 .wwd-category {
     background-color: var(--navy);
+    z-index: 3;
 }
 
 .wwd-res-item {
@@ -835,7 +913,7 @@ article, .single-entry-content {
     padding-top: 1rem;
 }
 
-.wwd-item:hover {
+.wwd-item:hover, .free-consult i:hover {
     filter: brightness(0.9);
     transition: 0.4s;
     cursor: pointer;
@@ -895,15 +973,17 @@ article, .single-entry-content {
 
 div.loginBtn:hover,    
 .loginBtn:hover,
-.loginBtn:focus, 
 div.free-consult button:hover,    
 .free-consult button:hover,
-.free-consult button:focus,
 .free-consult .wpbc_container.wpbc_container_booking_form .wpbc_button_light:hover,
 .aboutBtn:hover,
-.project-link:hover {
+.project-link:hover,
+.free-consult .loginBtn.blue,
+.free-consult .blue
+
+{
     color: #fff;
-    box-shadow: inset 11.5rem 0 0 0 var(--navy);
+    box-shadow: inset 19.5rem 0 0 0 var(--navy);
     cursor: pointer;
 }
 
@@ -1101,6 +1181,7 @@ body {
         white-space: wrap;
         animation: fadeIn 1s;
         visibility: visible;
+        color: var(--font-light);
     }
 
     .about-ctn.active {
@@ -1110,6 +1191,23 @@ body {
 }
 
 @media only screen and (max-width: 768px) {
+
+    .wwd-item {
+        width: 165px;
+        margin: 0;
+    }
+    .wwd-item i {
+        font-size: 2rem;
+    }
+    .wwd-res div {
+        margin: 0;
+    }
+
+    .aboutBtn {
+        margin: auto;
+        width: 140px;
+        text-align: center;
+    }
 
     .menu-button, .menuList .link {
         display: block;
