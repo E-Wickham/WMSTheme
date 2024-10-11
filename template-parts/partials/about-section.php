@@ -2,9 +2,7 @@
         <div class="about">
             <div class="aboutFlex">
                 <div class="aboutImg"></div>
-                <div class="aboutLogin" x-data="{ active: false }">
-                    
-                        <h3>About Us</h3>
+                <div class="aboutLogin" x-data="{ active: false }">                    
                         <div class="loginBtn hidden" @click="active = !active"> About 
 
                         
