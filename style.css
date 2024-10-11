@@ -666,11 +666,16 @@ main.single h4 {
 
 .single-grid-2 h4, .single-grid-2 h5{
     margin: 0;
+    margin-top: 0.25rem;
 }
 
 .single-grid-2 .attachment-post-thumbnail {
     max-height: 150px;
     max-width: 100%;
+}
+
+main.single .single-grid-2 h4  {
+    margin: 0;
 }
 
 .single-grid-2 {
@@ -1192,6 +1197,14 @@ body {
 
 
 @media only screen and (max-width: 1200px) {
+    
+    main.single .entry-header {
+        padding: 0;
+    }
+    .single_page {
+        padding: 0.25rem;
+        max-width:none;
+    }
 
     .single-entry-grid {
         grid-template-columns: 1fr;
@@ -1240,7 +1253,12 @@ body {
 }
 
 @media only screen and (max-width: 768px) {
-
+    
+    main.single .entry-header {
+        padding: 0;
+        max-width: none;
+        width: 100%;
+    }
     
     .wwd-res {
         grid-template-columns: 1fr;
