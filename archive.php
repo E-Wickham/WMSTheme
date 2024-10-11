@@ -39,5 +39,23 @@ include('header2.php');
         </div>
     </main>
 </div>
-<?php get_footer();
-?>
+<style>
+    .archive-wrapper {
+        max-width: 1200px;
+        margin: auto;
+    }
+    .entry-header {
+        border: 1px solid #cacaca;
+        background-color: #fff;
+    }
+    .entry-header:hover {
+        backdrop-filter: brightness(0.8);
+    }
+
+</style>
+<script>
+    let titleOrig = document.querySelector(".archive-title").innerHTML
+    let titleElem = document.querySelector(".archive-title")
+    let titleNew = titleOrig.replace("Category: ",'')
+    titleElem.innerHTML = titleNew
+</script>

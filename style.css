@@ -768,7 +768,7 @@ main.single h4 {
     background-color: #fdc45b;
 }
 .wwd-cat {
-    width: 100%;
+    flex: 1 0 450px;
 }
 .we-do-ctn {
     display: grid;
@@ -957,11 +957,13 @@ main.single h4 {
 }
 
 .wwd-res {
-    display: grid;
-    grid-template-columns: repeat(auto-fit,minmax(400px, 1fr));
+    display: flex;
+    /*grid-template-columns: repeat(auto-fit,minmax(400px, 1fr));*/
     justify-items: center;
     gap: 1rem;
     padding: 1rem;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 
 .wwd-res div {
@@ -1253,7 +1255,9 @@ body {
     .wwd-res div {
         margin: 0;
     }
-
+    .wwd-cat {
+        flex: 1 1 auto;
+    }
     .aboutBtn {
         margin: auto;
         width: 140px;

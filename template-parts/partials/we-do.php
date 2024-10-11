@@ -27,7 +27,7 @@
                     <div class="wwd-cat" x-show="jrnl" x-transition>
                         <i class='bx bx-x-circle close-btn' @click="jrnl = ! jrnl"></i>
                         <div class="wwd-res-item jrnl">
-                            <img src="https://wickhammediasolutions.com/wp-content/uploads/2024/08/podcast-8687965_1280.jpg" alt="Journalism">
+                            <img src="https://wickhammediasolutions.com/wp-content/uploads/2024/08/coffee-1869772_1280.jpg" alt="Journalism">
                             <div class="explainer">
                                 <h5>Journalism</h5>
                                 <div>
@@ -39,7 +39,7 @@
                                     ?>
                                 </div>
                                 <div>
-                                    <a class="aboutBtn" href="https://wickhammediasolutions.com/podcast-production/">Read More</a>
+                                    <a class="aboutBtn" href="https://wickhammediasolutions.com/category/portfolio/journalism//">Read More</a>
                                 </div>
                             </div>
                         </div>
