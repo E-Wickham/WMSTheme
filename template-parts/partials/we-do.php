@@ -63,7 +63,7 @@
                                 </div>
                                 <div>
                                     <?php 
-                                        get_posts_by_categories([4],2)
+                                        //get_posts_by_categories([4],2)
                                     ?>
                                 </div>
                                 <div>
