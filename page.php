@@ -6,8 +6,8 @@ get_header();
 include('header2.php');
 
 ?>
- <div id="primary" class="single content-area">
-    <main id="main" class="single site-main">
+ <div id="primary" class="single_page content-area">
+    <main id="main" class="single_page site-main">
         <div class="single_page">
             <?php
             while ( have_posts() ) :
