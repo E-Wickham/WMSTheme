@@ -8,11 +8,10 @@
         <?php
         // Featured query - five most recent published featured posts
         $fqueryArgs = array( 'posts_per_page' => 5, 'offset' => 0, 'category__in => 6');
-        $topfeatured = new WP_Query ( $fqueryArgs );
-        $firstsix_ids = array();
+        $blogposts = new WP_Query ( $fqueryArgs );
         $storynum = 1;
-        while ( $topfeatured->have_posts() ) :	
-                $topfeatured->the_post();
+        while ( $blogposts->have_posts() ) :	
+                $blogposts->the_post();
                 echo "<div class='ft-story'>";
                 get_template_part( 'template-parts/content-posts' );
                 echo"</div>";
