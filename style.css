@@ -1220,8 +1220,8 @@ body {
     .about-section2.active,
     .about-section3.active, 
     .about-section4.active, 
-    .about-section5.active 
-    .about-section6.active 
+    .about-section5.active, 
+    .about-section6.active, 
     .about-section7.active 
     {
         text-wrap: wrap;
