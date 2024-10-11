@@ -55,7 +55,8 @@
                         <span class="cat-links">
                             <?php
                                 $post_categories = wp_get_post_categories( $post_id );
-                                //echo '<span class="date">'.$poststamp.'</span><h6 class="post_author red-font">';
+                                echo '<span class="date">'.$poststamp.'</span>';
+                                //echo <h6 class="post_author red-font">';
                                     //the_author();
                                 //echo '</h6>';
                                 //CATEGORY NAMES INCLUDED

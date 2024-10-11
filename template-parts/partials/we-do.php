@@ -35,7 +35,7 @@
                                 </div>
                                 <div>
                                     <?php 
-                                        get_posts_by_categories(4,2);
+                                        get_posts_by_categories(7,3);
                                     ?>
                                 </div>
                                 <div>
@@ -55,7 +55,7 @@
                                 </div>
                                 <div>
                                     <?php 
-                                        get_posts_by_categories(3,2);
+                                        get_posts_by_categories(3,3);
                                     ?>
                                 </div>
                                 <div>
@@ -75,7 +75,7 @@
                                 </div>
                                 <div>
                                     <?php 
-                                        get_posts_by_categories(5,2);
+                                        get_posts_by_categories(5,3);
                                     ?>
                                 </div>
                                 <div>
@@ -95,7 +95,7 @@
                                 </div>
                                 <div>
                                     <?php 
-                                        get_posts_by_categories(4,2);
+                                        get_posts_by_categories(4,3);
                                     ?>
                                 </div>
                                     <a class="aboutBtn" href="https://wickhammediasolutions.com/news-products/">Read More</a>
@@ -109,12 +109,12 @@
         </div>
 <?php
 
-function get_posts_by_categories($categories, $post_count = 2) {
+function get_posts_by_categories($categories, $post_count) {
     // Setup WP_Query arguments
     $args = [
         'post_type' => 'post',
         'posts_per_page' => $post_count, 
-        'category__in' => $categories, // Pass categories as array
+        'category__in' => $categories, 
         'orderby' => 'date', 
         'order' => 'DESC', 
     ];
