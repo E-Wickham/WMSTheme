@@ -1262,6 +1262,9 @@ body {
     .portfolio-page-content {
         padding: 1rem;
     }
+    .portfolio-page-content .entry-header {
+        padding: 0;
+    }
     .portfolio-page-content .single-grid-1 {
         max-width: 1000px;
     }
