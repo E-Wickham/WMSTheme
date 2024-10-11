@@ -6,10 +6,12 @@
 
 <div class="category-posts" x-intersect="$el.classList.add('showing')">
         <?php
-        // Featured query - five most recent published featured posts
-        $fqueryArgs = array( 'posts_per_page' => 5, 'offset' => 0, 'category__in => 6');
+        // Featured query - five most recent blog posts
+        $fqueryArgs = array( 
+                'posts_per_page' => 5, 
+                'offset' => 0, 
+                'cat' => 6);
         $blogposts = new WP_Query ( $fqueryArgs );
-        $storynum = 1;
         while ( $blogposts->have_posts() ) :	
                 $blogposts->the_post();
                 echo "<div class='ft-story'>";
