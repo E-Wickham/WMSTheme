@@ -34,17 +34,9 @@
                                     A quick look at some of my best work in print. 
                                 </div>
                                 <div>
-                                    <?php
-                                        wp_reset_query();
-                                        // Featured query - five most recent published featured posts
-                                        $fqueryArgs = array( 'posts_per_page' => 3, 'offset' => 0);
-                                        $topfeatured = new WP_Query ( $fqueryArgs );
-                                        while ( $topfeatured->have_posts() ) :	
-                                                $topfeatured->the_post();
-                                                the_title();
-                                        endwhile; 
-                                        wp_reset_query(); // End of the loop.					
-                                    ?>	
+                                    <?php 
+                                        get_posts_by_categories(4,2);
+                                    ?>
                                 </div>
                                 <div>
                                     <a class="aboutBtn" href="https://wickhammediasolutions.com/podcast-production/">Read More</a>
@@ -63,7 +55,7 @@
                                 </div>
                                 <div>
                                     <?php 
-                                        //get_posts_by_categories([4],2)
+                                        get_posts_by_categories(3,2);
                                     ?>
                                 </div>
                                 <div>
@@ -82,6 +74,11 @@
                                     Examples of web development work.
                                 </div>
                                 <div>
+                                    <?php 
+                                        get_posts_by_categories(5,2);
+                                    ?>
+                                </div>
+                                <div>
                                     <a class="aboutBtn" href="https://wickhammediasolutions.com/web-development/">Read More</a>
                                 </div>
                             </div>
@@ -97,6 +94,10 @@
                                     Interactives, data-driven journalism, and news products 
                                 </div>
                                 <div>
+                                    <?php 
+                                        get_posts_by_categories(4,2);
+                                    ?>
+                                </div>
                                     <a class="aboutBtn" href="https://wickhammediasolutions.com/news-products/">Read More</a>
                                 </div>
                             </div>
@@ -111,14 +112,14 @@
 $cat = get_categories();
 var_dump($cat);
 
-function get_posts_by_categories($categories = [], $post_count = 4) {
+function get_posts_by_categories($categories, $post_count = 2) {
     // Setup WP_Query arguments
     $args = [
         'post_type' => 'post',
         'posts_per_page' => $post_count, 
         'category__in' => $categories, // Pass categories as array
-        'orderby' => 'date', // Order by post date
-        'order' => 'DESC', // Descending order
+        'orderby' => 'date', 
+        'order' => 'DESC', 
     ];
     // Run WP_Query
     $query = new WP_Query($args);
@@ -135,5 +136,7 @@ function get_posts_by_categories($categories = [], $post_count = 4) {
         wp_reset_postdata();
     } else {
         echo 'No post data available';
+        // Reset post data
+        wp_reset_postdata();
     }
 }
