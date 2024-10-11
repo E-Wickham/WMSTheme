@@ -24,7 +24,7 @@
                     </div>
                 </div>
                 <div class="wwd-res">
-                    <div x-show="jrnl" x-transition>
+                    <div class="wwd-cat" x-show="jrnl" x-transition>
                         <i class='bx bx-x-circle close-btn' @click="jrnl = ! jrnl"></i>
                         <div class="wwd-res-item jrnl">
                             <img src="https://wickhammediasolutions.com/wp-content/uploads/2024/08/podcast-8687965_1280.jpg" alt="Journalism">
@@ -44,7 +44,7 @@
                             </div>
                         </div>
                     </div>
-                    <div x-show="pod" x-transition>
+                    <div class="wwd-cat" x-show="pod" x-transition>
                         <i class='bx bx-x-circle close-btn' @click="pod = ! pod"></i>
                         <div class="wwd-res-item pod">
                             <img src="https://wickhammediasolutions.com/wp-content/uploads/2024/08/podcast-8687965_1280.jpg" alt="Podcast">
@@ -64,7 +64,7 @@
                             </div>
                         </div>
                     </div>
-                    <div x-show="webdev" x-transition>
+                    <div class="wwd-cat" x-show="webdev" x-transition>
                         <i class='bx bx-x-circle close-btn' @click="webdev = ! webdev"></i>
                         <div class="wwd-res-item web">
                             <img src="https://wickhammediasolutions.com/wp-content/uploads/2024/08/programming-1873854_1280.png" alt="Web Development">
@@ -84,7 +84,7 @@
                             </div>
                         </div>
                     </div>
-                    <div x-show="newsprod" x-transition>
+                    <div class="wwd-cat" x-show="newsprod" x-transition>
                         <i class='bx bx-x-circle close-btn' @click="newsprod = ! newsprod"></i>
                         <div class="wwd-res-item news">
                             <img src="https://wickhammediasolutions.com/wp-content/uploads/2024/08/coffee-1869772_1280.jpg" alt="Coffee">
@@ -108,9 +108,6 @@
            </div>
         </div>
 <?php
-
-$cat = get_categories();
-var_dump($cat);
 
 function get_posts_by_categories($categories, $post_count = 2) {
     // Setup WP_Query arguments

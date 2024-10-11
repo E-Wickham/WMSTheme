@@ -540,6 +540,7 @@ h3.news-category {
     display: flex;
     flex-direction: column;
     gap: 1rem;
+    text-align: center;
 }
 
 footer {
@@ -750,7 +751,9 @@ article, .single-entry-content {
 .wwd-item.active {
     background-color: #fdc45b;
 }
-
+.wwd-cat {
+    width: 100%;
+}
 .we-do-ctn {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));    
@@ -938,30 +941,29 @@ article, .single-entry-content {
 }
 
 .wwd-res {
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(400px, 1fr));
+    justify-items: center;
     gap: 1rem;
     padding: 1rem;
-    margin-left: 2rem;
 }
 
 .wwd-res div {
     max-width: 900px;
-    margin: auto;
     border-radius: 0.25rem;
 }
 
 .wwd-res-item {
     background-color: var(--bg-light);
+    width: 100%;
 }
 
 .close-btn {
     float: right;
     position: relative;
     font-size: 2rem;
-    right: 40px;
-    top: 8px;
+    right: 5px;
+    top: 38px;
 }
 
 .close-btn:hover {
@@ -1139,6 +1141,13 @@ body {
     border-top: 1px solid #444;
 }
 
+.aboutBtn {
+    margin: auto;
+    width: 90px;
+    text-align: center;
+}
+
+
 @media (min-width: 600px) {
     .menu-links {
         display: flex;
@@ -1157,6 +1166,7 @@ body {
 .menuList.show {
     visibility:visible;
 }
+
 
 
 @media only screen and (max-width: 1200px) {
@@ -1206,6 +1216,10 @@ body {
 
 @media only screen and (max-width: 768px) {
 
+    
+    .wwd-res {
+        grid-template-columns: 1fr;
+    }
     .wwd-item {
         width: 165px;
         margin: 0;
