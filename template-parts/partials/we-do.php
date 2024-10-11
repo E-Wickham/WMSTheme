@@ -128,15 +128,7 @@ function get_posts_by_categories($categories = [], $post_count = 4) {
         // Loop through the posts
         while ($query->have_posts()) {
             $query->the_post(); 
-            ?>
-            <a href="<?php echo esc_url(get_permalink()); ?>" target="_blank">
-                <div class="we-do-post">
-                    <?php 
-                        the_title();
-                    ?>
-                </div>
-            </a>
-        <?         
+            get_template_part( 'template-parts/post/we-do-list' );                 
         }
         echo '</div>'; 
         // Reset post data
