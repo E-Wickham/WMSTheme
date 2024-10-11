@@ -325,7 +325,10 @@ li.menu-item {
     height: 100px;
     width: 100%;
     object-fit: cover;
+}
 
+.category-posts .entry-header {
+    background-color: #fff;
 }
 
 h3.news-category {
@@ -1217,7 +1220,10 @@ body {
     .about-section2.active,
     .about-section3.active, 
     .about-section4.active, 
-    .about-section5.active {
+    .about-section5.active 
+    .about-section6.active 
+    .about-section7.active 
+    {
         text-wrap: wrap;
         white-space: wrap;
         animation: fadeIn 1s;
