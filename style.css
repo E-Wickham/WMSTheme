@@ -1205,7 +1205,7 @@ body {
         padding: 0.25rem;
         max-width:none;
     }
-
+    .
     .single-entry-grid {
         grid-template-columns: 1fr;
     }
@@ -1259,7 +1259,12 @@ body {
         max-width: none;
         width: 100%;
     }
-    
+    .portfolio-page-content {
+        padding: 1rem;
+    }
+    .portfolio-page-content .single-grid-1 {
+        max-width: 1000px;
+    }
     .wwd-res {
         grid-template-columns: 1fr;
     }
