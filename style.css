@@ -1384,5 +1384,8 @@ body {
         flex-wrap: wrap;
     }
 
+    .navFlex.sidepage h1 {
+        font-size: 1.2rem;
+    }
 
 }

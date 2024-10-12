@@ -29,7 +29,7 @@
         <a href="https://wickhammediasolutions.com">
                 <div class="title">
                     <!--replace this with new logo-->                   
-                    <h1>Wickham Media Solutions</h1>
+                    <h1>Eric Wickham</h1>
                 </div>
         </a>
 
