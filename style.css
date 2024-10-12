@@ -1262,6 +1262,10 @@ body {
 
 @media only screen and (max-width: 768px) {
     
+    .we-do-ctn {
+        grid-template-columns: 1fr;
+    }
+
     main.single .entry-header {
         padding: 0;
         max-width: none;
