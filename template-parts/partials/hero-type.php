@@ -82,21 +82,7 @@
         elem.scrollIntoView()
         elem.click()
     }
-    function podProd() {
-        const elem = document.querySelector(".wwd-item.pod")
-        elem.scrollIntoView()
-        elem.click()
-    }
-    function webDev() {
-        const elem = document.querySelector(".wwd-item.web")
-        elem.scrollIntoView()
-        elem.click()
-    }
-    function newsProd() {
-        const elem = document.querySelector(".wwd-item.news")
-        elem.scrollIntoView()
-        elem.click()
-    }
+
 </script>
 
 <style>

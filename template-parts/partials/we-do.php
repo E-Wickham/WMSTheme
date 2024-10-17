@@ -87,7 +87,7 @@
                     <div class="wwd-cat" x-show="newsprod" x-transition>
                         <i class='bx bx-x-circle close-btn' @click="newsprod = ! newsprod"></i>
                         <div class="wwd-res-item news">
-                            <img src="https://wickhammediasolutions.com/wp-content/uploads/2024/08/coffee-1869772_1280.jpg" alt="Coffee">
+                            <img src="https://wickhammediasolutions.com/wp-content/uploads/2024/08/computer-4795762_1920.jpg" alt="News Products">
                             <div class="explainer">
                                 <h5>News Products</h5>
                                 <div>
