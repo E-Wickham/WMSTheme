@@ -17,11 +17,11 @@
 <body> 
     <div class="election-ticker">
         <div class="tic-elem-flex">
-            <div class="tic-elem-title">1. CPC</div>
+            <div class="tic-elem-title">CPC</div>
             <div class="cpc-data"><?php the_field('cpc-data');?></div>
         </div>
         <div class="tic-elem-flex">
-        <div class="tic-elem-title">2.LPC</div>
+        <div class="tic-elem-title">LPC</div>
             <div class="lpc-data"><?php the_field('lpc-data');?></div>
         </div>
         <div class="tic-elem-flex">
