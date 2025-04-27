@@ -16,12 +16,29 @@
 </head>
 <body> 
     <div class="election-ticker">
-        <div class="cpc-data"><?php the_field('cpc-data');?></div>
-        <div class="lpc-data"><?php the_field('lpc-data');?></div>
-        <div class="ndp-data"><?php the_field('ndp-data');?></div>
+        <div class="tic-elem-flex">
+            <div class="tic-elem-title">CPC</div>
+            <div class="cpc-data"><?php the_field('cpc-data');?></div>
+        </div>
+        <div class="tic-elem-flex">
+        <div class="tic-elem-title">LPC</div>
+            <div class="lpc-data"><?php the_field('lpc-data');?></div>
+        </div>
+        <div class="tic-elem-flex">
+            <div class="tic-elem-title">NDP</div>
+            <div class="ndp-data"><?php the_field('ndp-data');?></div>
+        </div>
+        <div class="tic-elem-flex">
+            <div class="tic-elem-title">BQ</div>    
         <div class="bq-data"><?php the_field('bq-data');?></div>
-        <div class="gp-data"><?php the_field('gp-data');?></div>
-        <div class="polls-data"><?php the_field('polls-data');?></div>
+        </div>
+        <div class="tic-elem-flex">
+            <div class="tic-elem-title">GP</div>
+            <div class="gp-data"><?php the_field('gp-data');?></div>
+        </div>
+        <div class="tic-elem-flex">
+            <div class="tic-elem-title">Polls Reporting</div>
+            <div class="polls-data"><?php the_field('polls-data');?></div>
     </div>
 </body>
 </html>
