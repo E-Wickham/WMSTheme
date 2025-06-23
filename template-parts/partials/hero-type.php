@@ -25,8 +25,18 @@
                             <div class="button-flex">
                                 <div :class="active ? 'blue': ''" class="loginBtn hidden" @click="active = !active" > About </div>
                                 <div class="loginBtn hidden" > Recent Work </div>
-                                <div class="loginBtn hidden" > BlueSky </div>
-                                <div class="loginBtn hidden" > TikTok </div>
+                                <div class="loginBtn hidden" > 
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-bluesky" viewBox="0 0 16 16">
+                                        <path d="M3.468 1.948C5.303 3.325 7.276 6.118 8 7.616c.725-1.498 2.698-4.29 4.532-5.668C13.855.955 16 .186 16 2.632c0 .489-.28 4.105-.444 4.692-.572 2.04-2.653 2.561-4.504 2.246 3.236.551 4.06 2.375 2.281 4.2-3.376 3.464-4.852-.87-5.23-1.98-.07-.204-.103-.3-.103-.218 0-.081-.033.014-.102.218-.379 1.11-1.855 5.444-5.231 1.98-1.778-1.825-.955-3.65 2.28-4.2-1.85.315-3.932-.205-4.503-2.246C.28 6.737 0 3.12 0 2.632 0 .186 2.145.955 3.468 1.948"/>
+                                    </svg> 
+                                     BlueSky
+                                </div>
+                                <div class="loginBtn hidden" > 
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-tiktok" viewBox="0 0 16 16">
+                                    <path d="M9 0h1.98c.144.715.54 1.617 1.235 2.512C12.895 3.389 13.797 4 15 4v2c-1.753 0-3.07-.814-4-1.829V11a5 5 0 1 1-5-5v2a3 3 0 1 0 3 3z"/>
+                                </svg> 
+                                TikTok
+                                </div>
                             </div>         
                             <div class="about-ctn" :class="active ? 'active' : 'hidden'">
                             <div>
@@ -80,10 +90,12 @@
         'posts_per_page' => 10,
     );
     $loop = new WP_Query($args);
+    $count = 1;
     while ( $loop->have_posts() ) {
         $loop->the_post();
         ?>
             <?php
+                
                     if(has_post_thumbnail()){
                         ?>
                         <div class="floating_thumb">

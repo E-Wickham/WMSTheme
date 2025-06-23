@@ -1062,6 +1062,10 @@ div.free-consult button:hover,
     top: -100px;
 }
 
+svg.bi {
+    margin-right: 0.25rem;
+}
+
 .wwd-category, .hero-contain {
     z-index: 4;
 }
