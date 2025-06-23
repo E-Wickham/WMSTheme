@@ -53,7 +53,7 @@
                                         <p>I'm also the Ontario reporter for PressProgress and the web developer for Unrigged.</p>  
                                     </div>
                                     <div :class="active ? 'active' : 'hidden'" class="about-section4">
-                                        <p>My work has been published in Macleans, CBC, Spacing, The Hoser, and The Maple</p>     
+                                        <p>My work has been published in Macleans, CBC, Spacing, The Hoser, and The Maple.</p>     
                                     </div>
                                     <div :class="active ? 'active' : 'hidden'" class="about-section5">
                                         <p>I enjoy working on building news products and infrastructure for independent</p>  
@@ -157,14 +157,6 @@
     transform: rotate(-45deg);
 }
 
-.hero-landing {
-    min-height: 375px;
-    padding: 1rem 0;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    justify-content: center;
-}
 .hero-landing h1 {
     font-size: 4rem;
     padding-right:0.5rem;

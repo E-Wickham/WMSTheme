@@ -106,7 +106,6 @@
                 </div>
 
            </div>
-        </div>
 <?php
 
 function get_posts_by_categories($categories, $post_count) {
