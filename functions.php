@@ -59,6 +59,58 @@ function my_register_sidebars() {
 	}
 	add_action('wp_head', 'wpb_hook_javascript');
 
+	// Our custom post type function
+function create_posttype() {
+  
+    register_post_type( 'Recommendations',
+    // CPT Options
+        array(
+            'labels' => array(
+                'name' => __( 'Recos' ),
+                'singular_name' => __( 'reco' )
+            ),
+            'public' => true,
+            'has_archive' => true,
+            'rewrite' => array('slug' => 'recos'),
+            'show_in_rest' => true,
+  
+        )
+    );
+
+	register_post_type( 'Testimonials',
+    // CPT Options
+        array(
+            'labels' => array(
+                'name' => __( 'Testimonials' ),
+                'singular_name' => __( 'testimonial' )
+            ),
+            'public' => true,
+            'has_archive' => true,
+            'rewrite' => array('slug' => 'testimonials'),
+            'show_in_rest' => true,
+  
+        )
+    );
+	register_post_type( 'Publications',
+    // CPT Options
+        array(
+            'labels' => array(
+                'name' => __( 'Publications' ),
+                'singular_name' => __( 'Publication' )
+            ),
+            'public' => true,
+            'has_archive' => true,
+            'rewrite' => array('slug' => 'publications'),
+            'show_in_rest' => true,
+			'supports' => array( 'title', 'custom-fields','thumbnail' ),
+        )
+    );
+}
+
+
+// Hooking up our function to theme setup
+add_action( 'init', 'create_posttype' );
+
 
 
 

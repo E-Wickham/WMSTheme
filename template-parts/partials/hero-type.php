@@ -24,7 +24,9 @@
                     <div class="aboutLogin" x-data="{ active: false, consult: false }">     
                             <div class="button-flex">
                                 <div :class="active ? 'blue': ''" class="loginBtn hidden" @click="active = !active" > About </div>
-                                <button :class="consult ? 'blue': ''" x-on:click="consult = ! consult">Book a free consultation</button>
+                                <div class="loginBtn hidden" > Recent Work </div>
+                                <div class="loginBtn hidden" > BlueSky </div>
+                                <div class="loginBtn hidden" > TikTok </div>
                             </div>         
                             <div class="about-ctn" :class="active ? 'active' : 'hidden'">
                             <div>
@@ -32,25 +34,25 @@
                             </div>      
                                 <div class="about-ctn-text">
                                     <div :class="active ? 'active' : 'hidden'" class="about-section1">
-                                        <p>Eric is a journalist, podcast producer and full stack developer based in Toronto, Canada.</p>   
+                                        <p>Hello, My name is Eric Wickham. </p>   
                                     </div>
                                     <div :class="active ? 'active' : 'hidden'" class="about-section2">
-                                        <p>Currently, he is the producer of Tech Won't Save Us and Sources by PressProgress. Eric is</p>
+                                        <p>I am a journalist, podcast producer and full stack developer based in Toronto, Canada.</p>
                                     </div>
                                     <div :class="active ? 'active' : 'hidden'" class="about-section3">
-                                        <p>also the web developer for Unrigged and the project lead for The Hoser's Grocery Tracker </p>  
+                                        <p>I'm also the Ontario reporter for PressProgress and the web developer for Unrigged.</p>  
                                     </div>
                                     <div :class="active ? 'active' : 'hidden'" class="about-section4">
-                                        <p>Project. His written work has been published in Macleans, The Hoser, The Maple and</p>     
+                                        <p>My work has been published in Macleans, CBC, Spacing, The Hoser, and The Maple</p>     
                                     </div>
                                     <div :class="active ? 'active' : 'hidden'" class="about-section5">
-                                        <p>Spacing Magazine. Eric's current work centers on building news products and infrastructure</p>  
+                                        <p>I enjoy working on building news products and infrastructure for independent</p>  
                                     </div>
                                     <div :class="active ? 'active' : 'hidden'" class="about-section6">
-                                        <p>for independent Canadian media outlets.</p>  
+                                        <p>Canadian media outlets. And I love writing a good story.</p>  
                                     </div>
                                     <div :class="active ? 'active' : 'hidden'" class="about-section7">
-                                        <p>Click on a link below to see some of his work, or book a free consultation at the link above!</p>  
+                                        <p>Click on a link below to see some of my work!</p>  
                                     </div>
                                 </div>
                                 <div class="about-ctn-text-resp" x-show="active">
@@ -61,20 +63,43 @@
                                         Project. His written work has been published in Macleans, The Hoser, The Maple and   
                                         Spacing Magazine. Eric's current work centers on building news products and infrastructure for independent Canadian media outlets.
                                     </p>  
-                                    <p>Click on a link below to see some of his work, or book a free consultation at the link above!</p>  
+                                    <p>Click on a link below to see some of his work</p>  
                                 </div>
                             </div>
                         <i class='bx bx-x-circle close-btn' x-show="consult" @click="consult = ! consult"></i>
-
-                        <div class="consult-div" x-show="consult" x-transition>
-
-                            <?php echo do_shortcode("[booking resource_id=1]"); ?>
-                        </div>
                     </div>
                 </div>
         </div>
     </div>
 </div>
+<?php include('we-do.php');?>   
+<div class="floating_thumb-ctn">
+    <?php
+    $args = array(
+        'post_type'      => 'publications',
+        'posts_per_page' => 10,
+    );
+    $loop = new WP_Query($args);
+    while ( $loop->have_posts() ) {
+        $loop->the_post();
+        ?>
+            <?php
+                    if(has_post_thumbnail()){
+                        ?>
+                        <div class="floating_thumb">
+                            <?
+                            the_post_thumbnail();
+                            ?>
+                        </div>
+                        <?
+                    }
+            ?>
+        <?php
+    }?>
+</div>
+
+
+
 <script>
 
     function scrollTo(domElem) {
@@ -91,14 +116,7 @@
     display: none;
 }
 
-.hero-contain{
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ),url(https://wickhammediasolutions.com/wp-content/uploads/2024/08/computer-4795762_1920.jpg);
 
-    color: var(--font-light);
-}
 
 .hero-img {
     width: 200px;

@@ -38,12 +38,16 @@
                     <i x-show="!open" class='bx bx-menu'></i>
                 </button>
                 <div x-show="open" class="menuList" x-transition>
-                    <a href="https://wickhammediasolutions.com/wpbc-booking/"><div class="link-reg">Booking Calendar</div></a>
                     <a href="https://wickhammediasolutions.com/portfolio-page/"><div class="link-reg">Portfolio</div></a>
+                    <a href="https://wickhammediasolutions.com/portfolio-page/"><div class="link-reg">Featured Work</div></a>
+                    <a href="https://wickhammediasolutions.com/portfolio-page/"><div class="link-reg">TikTok</div></a>
+                    <a href="https://wickhammediasolutions.com/portfolio-page/"><div class="link-reg">Bluesky</div></a>
                 </div>
                 <div x-show="!open" class="menuList-reg" x-transition>
-                    <a href="https://wickhammediasolutions.com/wpbc-booking/"><div class="link-reg">Booking Calendar</div></a>
                     <a href="https://wickhammediasolutions.com/portfolio-page/"><div class="link-reg">Portfolio</div></a>
+                    <a href="https://wickhammediasolutions.com/portfolio-page/"><div class="link-reg">Featured Work</div></a>
+                    <a href="https://wickhammediasolutions.com/portfolio-page/"><div class="link-reg">TikTok</div></a>
+                    <a href="https://wickhammediasolutions.com/portfolio-page/"><div class="link-reg">BlueSky</div></a>
                 </div>
             </div>
         </div>  
