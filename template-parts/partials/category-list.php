@@ -8,9 +8,9 @@
         <?php
         // Featured query - five most recent blog posts
         $fqueryArgs = array( 
-                'posts_per_page' => 5, 
+                'posts_per_page' => 3, 
                 'offset' => 0, 
-                'cat' => 6);
+                'cat' => 1);
         $blogposts = new WP_Query ( $fqueryArgs );
         while ( $blogposts->have_posts() ) :	
                 $blogposts->the_post();

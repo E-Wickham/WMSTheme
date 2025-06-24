@@ -6,6 +6,9 @@
 <div class="hero-contain">
     <div class="hero-grid">
         <div class="hero-img">
+                        <video class="hero-img-src" controls width="500" autoplay loop muted>
+                            <source src="https://wickhammediasolutions.com/wp-content/uploads/2025/06/eric-slideshow.webm" type="video/mp4">
+                        </video>
                 <img class="hero-img-src" src="https://wickhammediasolutions.com/wp-content/uploads/2024/10/eric2022-2.png" alt="Eric headshot">
         </div>
         <div class="hero-landing">
@@ -44,34 +47,33 @@
                             </div>      
                                 <div class="about-ctn-text">
                                     <div :class="active ? 'active' : 'hidden'" class="about-section1">
-                                        <p>Hello, My name is Eric Wickham. </p>   
+                                        <p>Hello, My name is Eric Wickham. I am a journalist, podcast producer and full stack developer</p>   
                                     </div>
                                     <div :class="active ? 'active' : 'hidden'" class="about-section2">
-                                        <p>I am a journalist, podcast producer and full stack developer based in Toronto, Canada.</p>
+                                        <p> based in Toronto. I work as the Ontario reporter for PressProgress and the web developer</p>
                                     </div>
                                     <div :class="active ? 'active' : 'hidden'" class="about-section3">
-                                        <p>I'm also the Ontario reporter for PressProgress and the web developer for Unrigged.</p>  
+                                        <p> for Unrigged. My work has been published in Maclean's, CBC, Spacing, The Hoser, and The Maple.</p>  
                                     </div>
                                     <div :class="active ? 'active' : 'hidden'" class="about-section4">
-                                        <p>My work has been published in Macleans, CBC, Spacing, The Hoser, and The Maple.</p>     
+                                        <p>I enjoy finding creative ways to tell stories, and building news products and infrastructure</p>     
                                     </div>
                                     <div :class="active ? 'active' : 'hidden'" class="about-section5">
-                                        <p>I enjoy working on building news products and infrastructure for independent</p>  
+                                        <p>for independent Canadian media outlets. Nothing is better than a well-reported story.</p>  
                                     </div>
                                     <div :class="active ? 'active' : 'hidden'" class="about-section6">
-                                        <p>Canadian media outlets. And I love writing a good story.</p>  
+                                        <p></p>  
                                     </div>
                                     <div :class="active ? 'active' : 'hidden'" class="about-section7">
                                         <p>Click on a link below to see some of my work!</p>  
                                     </div>
                                 </div>
                                 <div class="about-ctn-text-resp" x-show="active">
-                                    <p>Eric is a journalist, podcast producer and full stack developer based in Toronto, Canada.</p>   
+                                    <p>Hello, My name is Eric Wickham. I am a journalist, podcast producer and full stack developer based in Toronto</p>   
                                     <p>
-                                        Currently, he is the producer of Tech Won't Save Us and Sources by PressProgress. Eric is
-                                        also the web developer for Unrigged and the project lead for The Hoser's Grocery Tracker  
-                                        Project. His written work has been published in Macleans, The Hoser, The Maple and   
-                                        Spacing Magazine. Eric's current work centers on building news products and infrastructure for independent Canadian media outlets.
+                                        I work as the Ontario reporter for PressProgress and the web developer for Unrigged. My work has been published in Maclean's, CBC, Spacing,
+                                        The Hoser, and The Maple. I enjoy finding creative ways to tell stories, and building news products and infrastructure for independent 
+                                        Canadian media outlets. Nothing is better than a well-reported story.
                                     </p>  
                                     <p>Click on a link below to see some of his work</p>  
                                 </div>
@@ -83,32 +85,7 @@
     </div>
 </div>
 <?php include('we-do.php');?>   
-<div class="floating_thumb-ctn">
-    <?php
-    $args = array(
-        'post_type'      => 'publications',
-        'posts_per_page' => 10,
-    );
-    $loop = new WP_Query($args);
-    $count = 1;
-    while ( $loop->have_posts() ) {
-        $loop->the_post();
-        ?>
-            <?php
-                
-                    if(has_post_thumbnail()){
-                        ?>
-                        <div class="floating_thumb">
-                            <?
-                            the_post_thumbnail();
-                            ?>
-                        </div>
-                        <?
-                    }
-            ?>
-        <?php
-    }?>
-</div>
+
 
 
 
@@ -147,13 +124,14 @@
     display: grid;
     grid-template-columns: minmax(100px, 300px) minmax(668px, 800px);
     grid-gap: 1rem;
+    z-index: 3;
 }
     
 .hero-img-src {
     height: 300px;
     position: relative;
-    bottom: 19px;
-    right: 43px;
+    bottom: 40px;
+    right: 140px;
     transform: rotate(-45deg);
 }
 
@@ -310,12 +288,12 @@
 
     }
     90%{
-        transform: translateY(160px);
+        transform: translateY(140px);
         opacity: 1;
 
     }
     100% {
-        transform: translateY(160px);
+        transform: translateY(140px);
         opacity: 0;
 
     }

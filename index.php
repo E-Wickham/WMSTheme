@@ -9,20 +9,25 @@
     <main> 
         <div class="home-page">
             <?php include('template-parts/partials/hero-type.php');?>
+            <?php include('template-parts/partials/floating-elems.php');?>
         </div>
         <div class="site-content">
             <!-- SECOND NEWS SECTION -->
             <div class="section-2">
+                <h3 class="news-category">Featured Work</h3>
+                <?php include('template-parts/partials/category-list.php');?>
             </div>
             <!-- Featured Work-->
             <div class="section-3">
-                <h3 class="news-category">Featured Work</h3>
-                <?php include('template-parts/partials/category-list.php');?>
+                <h3 class="news-category">Bylines</h3>
+                <?php include('template-parts/partials/ticker.php');?>
+
             </div>
             <!-- What I'm reading-->
             <div class="section-4">
                 <h3 class="news-category">What I'm Reading</h3>
                 <?php include('template-parts/partials/category-list.php');?>
+                
             </div>
                         <!-- TESTIMONIAL SECTION -->
                         <h3 class="section-test-heading">Testimonials</h3>
