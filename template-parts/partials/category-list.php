@@ -10,7 +10,7 @@
         $fqueryArgs = array( 
                 'posts_per_page' => 3, 
                 'offset' => 0, 
-                'cat' => 1);
+                'cat' => 2);
         $blogposts = new WP_Query ( $fqueryArgs );
         while ( $blogposts->have_posts() ) :	
                 $blogposts->the_post();
