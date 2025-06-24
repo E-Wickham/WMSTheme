@@ -20,14 +20,14 @@
             <!-- Featured Work-->
             <div class="section-3">
                 <h3 class="news-category">Bylines</h3>
-                <?php include('template-parts/partials/ticker.php');?>
+                <?php //include('template-parts/partials/ticker.php');?>
 
             </div>
             <!-- What I'm reading-->
             <div class="section-4">
                 <h3 class="news-category">What I'm Reading</h3>
                 <?php include('template-parts/partials/category-list.php');?>
-                
+
             </div>
                         <!-- TESTIMONIAL SECTION -->
                         <h3 class="section-test-heading">Testimonials</h3>
