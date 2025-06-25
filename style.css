@@ -344,6 +344,7 @@ li.menu-item {
 h3.news-category {
     text-align: center;
     margin: 0;
+    padding: 1rem;
 }
 
 .section-3 .ft-story .entry-header {
@@ -407,6 +408,18 @@ h3.news-category {
     background-color: #fff;
     text-decoration: none;
 }
+
+.sclBtn {
+    text-decoration: none;
+    color: var(--font-light);
+    transition: 0.3s;
+    padding: 0.5rem 0.25rem;
+}
+
+.sclBtn:hover {
+    filter: brightness(0.8);
+}
+
 .project-link {
     margin: 0;
     color: var(--font-dark);
@@ -874,6 +887,7 @@ main.single .single-grid-2 h4  {
 .button-flex {
     display: flex;
     gap: 1rem;
+    align-items: center;
 }
   
 .free-consult {

@@ -105,6 +105,20 @@ function create_posttype() {
 			'supports' => array( 'title', 'custom-fields','thumbnail' ),
         )
     );
+	register_post_type( 'Published_Work',
+    // CPT Options
+        array(
+            'labels' => array(
+                'name' => __( 'Published Work' ),
+                'singular_name' => __( 'Published Work' )
+            ),
+            'public' => true,
+            'has_archive' => true,
+            'rewrite' => array('slug' => 'Work'),
+            'show_in_rest' => true,
+			'supports' => array( 'title', 'custom-fields','thumbnail' ),
+        )
+    );
 }
 
 
