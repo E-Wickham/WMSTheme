@@ -27,7 +27,11 @@
                     }
             ?>
         <?php
-    }?>
+    }
+    wp_reset_query(); // End of the loop.					
+
+    
+    ?>
     </div>
 </div>
 

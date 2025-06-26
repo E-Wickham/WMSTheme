@@ -15,12 +15,14 @@
             <!-- SECOND NEWS SECTION -->
             <div class="section-2">
                 <h3 class="news-category">Featured Work</h3>
-                <?php include('template-parts/partials/category-list.php');?>
+                <?php //include('template-parts/partials/category-list.php');
+                // 
+    ?>
             </div>
             <!-- Featured Work-->
             <div class="section-3">
                 <h3 class="news-category">Bylines</h3>
-                <?php //include('template-parts/partials/ticker.php');?>
+                <?php include('template-parts/partials/ticker.php');?>
 
             </div>
             <!-- What I'm reading-->
@@ -37,7 +39,36 @@
             </div>
 
         </div>
-        
+     <?php               
+    $args = array(
+        'post_type'      => 'Published_Work',
+        'posts_per_page' => 4,
+    );
+    $loop = new WP_Query($args);
+
+    $posts = $loop->posts;
+    foreach($posts as $post){
+        var_dump($post);
+    }
+    while ( $loop->have_posts() ) {
+        echo("true");
+        $loop->the_post();
+                        ?>
+                        <a class="floating_thumb" href="" target="_blank">
+                            <div class="floating_thumb-img">
+                            </div>
+                            <div>
+                                <? the_title(); 
+
+                                ?>
+                            </div>
+                        </a>
+                        <?
+                    
+    }
+    wp_reset_query(); // End of the loop.					
+
+                ?>
          
     </main>
 
