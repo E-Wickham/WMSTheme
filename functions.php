@@ -76,6 +76,20 @@ function create_posttype() {
   
         )
     );
+    register_post_type( 'Videos',
+    // CPT Options
+        array(
+            'labels' => array(
+                'name' => __( 'videos' ),
+                'singular_name' => __( 'video' )
+            ),
+            'public' => true,
+            'has_archive' => true,
+            'rewrite' => array('slug' => 'videos'),
+            'show_in_rest' => true,
+  
+        )
+    );
 
 	register_post_type( 'Testimonials',
     // CPT Options
@@ -101,20 +115,6 @@ function create_posttype() {
             'public' => true,
             'has_archive' => true,
             'rewrite' => array('slug' => 'publications'),
-            'show_in_rest' => true,
-			'supports' => array( 'title', 'custom-fields','thumbnail' ),
-        )
-    );
-	register_post_type( 'Published_Work',
-    // CPT Options
-        array(
-            'labels' => array(
-                'name' => __( 'Published Work' ),
-                'singular_name' => __( 'Published Work' )
-            ),
-            'public' => true,
-            'has_archive' => true,
-            'rewrite' => array('slug' => 'Work'),
             'show_in_rest' => true,
 			'supports' => array( 'title', 'custom-fields','thumbnail' ),
         )

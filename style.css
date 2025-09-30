@@ -9,7 +9,6 @@ Author URI:
 
 */
 
-
 :root {
     --font-light: #f5f5f5;
     --font-dark: #131313;
@@ -57,15 +56,12 @@ h1 {
 .section-test-heading {
     text-align: center;
 }
-
 .section-test {
     padding: 1rem;
 }
-
 .section-test #sp-testimonial-free-wrapper-20 .sp-testimonial-free-section .testimonial-nav-arrow {
     border-radius: 50%;
     height: 2rem;
-
 }
 .section-test #sp-testimonial-free-wrapper-20 .sp-testimonial-free-section .testimonial-nav-arrow .fa.fa-angle-right {
     position:relative;
@@ -75,7 +71,6 @@ h1 {
     position:relative;
     right: 1px;
 }
-
 .section-test #sp-testimonial-free-wrapper-20{
     max-width: 1000px;
     margin: auto;
@@ -105,11 +100,8 @@ h1 {
     align-items: center;
     position: absolute;
     right: 0;
-    /*background-color: var(--bg-dark);*/
     color: var(--font-light);
     padding: 1rem 1rem;
-    /*box-shadow: rgba(9, 30, 66, 0.25) 0px 4px 8px -2px, rgba(9, 30, 66, 0.08) 0px 0px 0px 1px;*/
-    /*background-image: linear-gradient(var(--navy) 50%, var(--navy2));*/
 }
 
 .navFlex.sidepage {
@@ -126,14 +118,13 @@ h1 {
     margin: 0;
 }
 .navFlex.sidepage {
-    /*height: 80px;*/
     box-shadow: rgba(9, 30, 66, 0.25) 0px 4px 8px -2px, rgba(9, 30, 66, 0.08) 0px 0px 0px 1px;
     background-color: var(--bg-dark);
     width: 100%;
     position: relative;
 }
 
-.navFlex a {
+.navFlex a, .sub-heading a, .links a {
     text-decoration: none;
     color: var(--font-light);
 }
@@ -145,11 +136,6 @@ h1 {
     justify-content: center;
     padding: 0.45rem;
     margin-bottom: 1rem;
-}
-
-.sub-heading a {
-    text-decoration: none;
-    color: var(--font-light);
 }
 
 .title {
@@ -177,11 +163,6 @@ h1 {
 }
 .date, .post_author, .menuList, .menuList-reg, .sub-header {
     font-family: 'Roboto Serif';
-}
-
-.links a {
-    text-decoration: none;
-    color: var(--font-light);
 }
 
 .links a:hover, .sub-heading a:hover {
@@ -224,10 +205,9 @@ li.menu-item {
 .ft-story {
     border-radius: 0.5rem;
 }
-.ft-story a {
+.ft-story a, .login-link {
     text-decoration: none;
-    color: var(--font-dark);
-    
+    color: var(--font-dark);  
 }
 .ft-story.top .entry-content-holder {
     position: relative;
@@ -243,7 +223,6 @@ li.menu-item {
     border-radius: 0.125rem;
 
 }
-
 
 .ft-story h2 {
     margin: 0;
@@ -281,7 +260,6 @@ li.menu-item {
     padding: 0.125rem 0;
 }
 
-
 /* TOP STORY STYLING DIFFERENT THAT OTHER STORIES */
 .ft-story.top img {
     height: 100%;
@@ -291,7 +269,6 @@ li.menu-item {
 .ft-story.top article{
     display: block;
 }
-
 
 .ft-story article {
     display: flex;
@@ -344,7 +321,6 @@ li.menu-item {
 h3.news-category {
     text-align: center;
     margin: 0;
-    padding: 1rem;
 }
 
 .section-3 .ft-story .entry-header {
@@ -409,15 +385,10 @@ h3.news-category {
     text-decoration: none;
 }
 
-.sclBtn {
-    text-decoration: none;
-    color: var(--font-light);
-    transition: 0.3s;
-    padding: 0.5rem 0.25rem;
-}
-
-.sclBtn:hover {
-    filter: brightness(0.8);
+.login-link .loginBtn {
+    font-size: 1.2rem;
+    font-family: 'Lato';
+    font-weight: 600;
 }
 
 .project-link {
@@ -750,9 +721,8 @@ main.single .single-grid-2 h4  {
     display: flex;
     justify-content: center;
     color: var(--font-light);
-    
+    padding-bottom: 2rem;
 }
-
 
 .ft-story article {
     border-radius: 0.125rem;
@@ -769,8 +739,6 @@ main.single .single-grid-2 h4  {
 .category-posts .ft-story .post-thumbnail img {
     border-radius: 0.125rem 0.125rem 0 0;
 }
-
-
 
 /* ARCHIVE PAGE */
 
@@ -854,7 +822,6 @@ main.single .single-grid-2 h4  {
     border-radius: 0.25rem 0.25rem 0 0;
 }
 
-
 .menu-button {
     background: none;
     border: none;
@@ -887,9 +854,12 @@ main.single .single-grid-2 h4  {
 .button-flex {
     display: flex;
     gap: 1rem;
-    align-items: center;
 }
   
+.button-flex a {
+    text-decoration: none;
+}
+
 .free-consult {
     /*box-shadow: rgba(9, 30, 66, 0.25) 0px 4px 8px -2px, rgba(9, 30, 66, 0.08) 0px 0px 0px 1px;
     */
@@ -962,12 +932,16 @@ main.single .single-grid-2 h4  {
 .wwd-category {
     position: relative;
     z-index: 3;
+    background-color: var(--bg-light);
+
 }
 
 
 .wwd-category h3 {
     text-align: center;
-    color: var(--font-light);
+    color: var(--font-dark);
+    margin: 0;
+    padding: 1rem;
 }
 .wwd-items {
     display: flex;
@@ -1124,6 +1098,47 @@ svg.bi {
     margin-right: 0.25rem;
 }
 
+/*TikTok video section*/
+
+.vid-flex {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    padding-top: 1rem;
+    flex-wrap: wrap;
+}
+
+.vid-flex img {
+    width: 200px;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 0.25rem;
+    box-shadow: 2px 4px 15px -1px rgba(77,77,77,0.3);
+    transition: 0.4s;
+}
+
+.vid-flex img:hover {
+    filter: brightness(0.6);
+}
+
+.vid-flex img:hover + .vid-text {
+    opacity: 1;
+}
+
+a.vid-link {
+    text-decoration: none;
+    font-weight: 600;
+    text-align: center;
+    color: var(--font-light);
+} 
+
+.vid-text {
+    position:relative;
+    bottom: 160px;
+    transition: 0.4s;
+    opacity: 0;
+}
+
 @-webkit-keyframes flip-in-hor-bottom {
     0% {
       -webkit-transform: rotateX(80deg);
@@ -1201,8 +1216,6 @@ svg.bi {
     to { width: 100%; visibility: visible;}
   }
 
-
-
 /* Mini Menu */ 
 .menu-button{
     float:right;
@@ -1246,7 +1259,6 @@ body {
     to {opacity: 1;}
 }
 
-
 .menu-links {
     display: flex;
     flex-direction: column;
@@ -1263,7 +1275,6 @@ body {
     text-align: center;
 }
 
-
 @media (min-width: 600px) {
     .menu-links {
         display: flex;
@@ -1274,15 +1285,11 @@ body {
     .menu-links a {
         border-top: none;
     }
-
-
 }
-
 
 .menuList.show {
     visibility:visible;
 }
-
 
 
 @media only screen and (max-width: 1200px) {
@@ -1415,11 +1422,10 @@ body {
         padding: 1rem;
     }
     
-    .menuList{
+    .menuList, .miniMenu {
         display: flex;
     }
     .miniMenu {
-        display: flex;
         font-size: 2rem;
     }
     /* responsive menu design stuff */
@@ -1462,7 +1468,6 @@ body {
     .menuList ul a{
         color: var(--font-dark);
         text-decoration: none;
-        
     }
 
     .wpbc_booking_form_simple {
