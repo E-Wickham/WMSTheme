@@ -1,10 +1,6 @@
 <div class="vid-flex">
     <?php 
 
-    //thumbnail_url
-    //html
-    //echo '<img src="'.$url.'">';
-
     $query = new WP_Query( [
         'post_type'      => 'videos',
         'nopaging'       => true,
@@ -18,10 +14,7 @@
             array_push($tiktokUrl, $custom["tiktok_url"][0]);
         endwhile;
     }   
-    
-    
-    
-    //$tiktokUrl = ["https://www.tiktok.com/@e.wickham/video/7543663669457014023","https://www.tiktok.com/@e.wickham/video/7542546508239899922"];
+    var_dump($tiktokUrl);
     
     function tiktokGet($vidUrl) {
         $url = "https://www.tiktok.com/oembed?url=".$vidUrl;
@@ -37,9 +30,9 @@
         }
 
     }     
-    foreach ($tiktokUrl as $x) {
+    /*foreach ($tiktokUrl as $x) {
         tiktokGet($x);
-    }
+    }*/
     wp_reset_query();
     ?>
 </div>
