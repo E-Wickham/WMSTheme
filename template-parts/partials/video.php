@@ -14,25 +14,22 @@
             array_push($tiktokUrl, $custom["tiktok_url"][0]);
         endwhile;
     }   
-    var_dump($tiktokUrl);
-    
+
     function tiktokGet($vidUrl) {
         $url = "https://www.tiktok.com/oembed?url=".$vidUrl;
 
         $response = file_get_contents($url);
-
         if ($response !== false) {
             $data = json_decode($response, true);
-            //print_r($data);
-            ?><a class="vid-link" href="<? echo $vidUrl ?>" target="_blank"><img src="<?echo $data["thumbnail_url"];?>" alt="<?php $data["title"]?>"><div class="vid-text">Watch on TikTok</div></a><?
-        } else {
+            ?><a class="vid-link" href="<?php echo $vidUrl; ?>" target="_blank">
+				<img src="<?php echo $data["thumbnail_url"];?>" alt="<?php echo $data["title"];?>"><div class="vid-text">Watch on TikTok</div></a><?php } else {
             echo "Failed to fetch TikTok embed data.";
         }
 
     }     
-    /*foreach ($tiktokUrl as $x) {
+   foreach ($tiktokUrl as $x) {
         tiktokGet($x);
-    }*/
+    }
     wp_reset_query();
     ?>
 </div>
