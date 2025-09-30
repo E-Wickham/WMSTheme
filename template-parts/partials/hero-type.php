@@ -5,7 +5,7 @@
 ?>
 <div class="hero-contain" x-data="{ active: false, consult: false }">
     <div class="hero-grid">
-        <div class="hero-img" x-show="!active">
+        <div class="hero-img" :class="active ? 'hidden': ''">
                         <video class="hero-img-src" controls width="500" autoplay loop muted>
                             <source src="https://wickhammediasolutions.com/wp-content/uploads/2025/06/eric-slideshow.webm" type="video/mp4">
                         </video>
@@ -194,7 +194,9 @@
         justify-content: center;
         gap: 0.25rem;
     }
-
+    .hero-img.hidden {
+        display: none;
+    }
 }
 @media only screen and (max-width: 768px) {
     .hero-landing h1 {
