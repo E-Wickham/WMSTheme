@@ -40,6 +40,7 @@
     foreach ($tiktokUrl as $x) {
         tiktokGet($x);
     }
+    wp_reset_query();
     ?>
 </div>
 <a class="login-link" href="https://www.tiktok.com/@e.wickham" target="_blank">
