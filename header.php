@@ -12,7 +12,6 @@
         <meta charset="<?php bloginfo( 'charset') ?>">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <title><?php echo $bloginfo ?></title>
-        <link rel="stylesheet" href="style.css">
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Roboto+Serif:ital,opsz,wght@0,8..144,100..900;1,8..144,100..900&display=swap" rel="stylesheet">        
@@ -22,7 +21,6 @@
         <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
         <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
         <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-
     </head>
     <body <?php body_class();?> x-data>
     <nav>

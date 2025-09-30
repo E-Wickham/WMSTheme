@@ -3,8 +3,7 @@
 
     $query = new WP_Query( [
         'post_type'      => 'videos',
-        'nopaging'       => true,
-        'posts_per_page' => '3',
+        'posts_per_page' => 5,
     ] ); 
     $tiktokUrl = [];
 

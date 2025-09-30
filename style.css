@@ -1478,4 +1478,14 @@ body {
         font-size: 1.2rem;
     }
 
+    .vid-flex img {
+        width: 116.66px;
+        height: 175px;
+    }
+    .vid-text {
+        width: 116.66px;
+        text-wrap:wrap;
+        bottom: 100px;
+    }
+
 }

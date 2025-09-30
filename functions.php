@@ -91,34 +91,6 @@ function create_posttype() {
         )
     );
 
-	register_post_type( 'Testimonials',
-    // CPT Options
-        array(
-            'labels' => array(
-                'name' => __( 'Testimonials' ),
-                'singular_name' => __( 'testimonial' )
-            ),
-            'public' => true,
-            'has_archive' => true,
-            'rewrite' => array('slug' => 'testimonials'),
-            'show_in_rest' => true,
-  
-        )
-    );
-	register_post_type( 'Publications',
-    // CPT Options
-        array(
-            'labels' => array(
-                'name' => __( 'Publications' ),
-                'singular_name' => __( 'Publication' )
-            ),
-            'public' => true,
-            'has_archive' => true,
-            'rewrite' => array('slug' => 'publications'),
-            'show_in_rest' => true,
-			'supports' => array( 'title', 'custom-fields','thumbnail' ),
-        )
-    );
 }
 
 
