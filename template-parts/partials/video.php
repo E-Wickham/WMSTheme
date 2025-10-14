@@ -15,13 +15,14 @@
     }   
 
     function tiktokGet($vidUrl) {
-        $url = "https://www.tiktok.com/oembed?url=".$vidUrl;
+
+        $url = "https://www.tiktok.com/oembed?url=".urlencode($vidUrl);
 
         $response = file_get_contents($url);
         if ($response !== false) {
             $data = json_decode($response, true);
             ?><a class="vid-link" href="<?php echo $vidUrl; ?>" target="_blank">
-				<img src="<?php echo $data["thumbnail_url"];?>" alt="<?php echo $data["title"];?>"><div class="vid-text">Watch on TikTok</div></a><?php } else {
+				<img src="<?php echo esc_url($data["thumbnail_url"]);?>" alt="<?php echo $data["title"];?>"><div class="vid-text">Watch on TikTok</div></a><?php } else {
             echo "Failed to fetch TikTok embed data.";
         }
 
