@@ -86,6 +86,7 @@ function create_posttype() {
             'public' => true,
             'has_archive' => true,
             'rewrite' => array('slug' => 'videos'),
+			'supports' => ['title', 'thumbnail'], 
             'show_in_rest' => true,
   
         )
@@ -96,9 +97,5 @@ function create_posttype() {
 
 // Hooking up our function to theme setup
 add_action( 'init', 'create_posttype' );
-
-
-
-
 
 }
