@@ -1,0 +1,28 @@
+<?php
+/**
+ * Single page template
+ */
+
+ get_header();
+ include('header2.php');
+ ?>
+ <div id="primary" class="single content-area">
+    <main id="main" style="background-color:#fff" class="single site-main">
+        <?php
+        while ( have_posts() ) :
+            the_post();
+            get_template_part( 'template-parts/post/single-video' );
+        endwhile;
+
+        // If comments are open then we can show the comments template.
+        if ( comments_open() || get_comments_number() ) :
+            comments_template();
+        endif;
+        ?>
+    </main>
+    <?php /*get_sidebar() */?>
+ </div>
+
+ <?php
+ get_footer();
+

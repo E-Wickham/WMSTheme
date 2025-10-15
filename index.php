@@ -24,7 +24,7 @@
             <!-- Featured Work-->
             <div class="section-3">
                 <h3 class="news-category">Videos</h3>
-                <?php //include('template-parts/partials/video.php'); ?>
+                <?php include('template-parts/partials/video.php'); ?>
 
                 <?php //include('template-parts/partials/ticker.php');?>
 
