@@ -31,7 +31,7 @@ function my_register_sidebars() {
 		)
 	);
 	/* Repeat register_sidebar() code for additional sidebars. */
-
+}
 	function wpb_hook_javascript() {
 		?>
 			<script>
@@ -98,4 +98,13 @@ function create_posttype() {
 // Hooking up our function to theme setup
 add_action( 'init', 'create_posttype' );
 
+
+function allow_all_uploads($mimes) {
+    $mimes['jpg'] = 'image/jpeg';
+    $mimes['jpeg'] = 'image/jpeg';
+    $mimes['png'] = 'image/png';
+    return $mimes;
 }
+
+add_filter('upload_mimes', 'allow_all_uploads');
+
