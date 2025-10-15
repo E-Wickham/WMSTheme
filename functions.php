@@ -99,12 +99,3 @@ function create_posttype() {
 add_action( 'init', 'create_posttype' );
 
 
-function allow_all_uploads($mimes) {
-    $mimes['jpg'] = 'image/jpeg';
-    $mimes['jpeg'] = 'image/jpeg';
-    $mimes['png'] = 'image/png';
-    return $mimes;
-}
-
-add_filter('upload_mimes', 'allow_all_uploads');
-
