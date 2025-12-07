@@ -72,6 +72,7 @@ function create_posttype() {
             'public' => true,
             'has_archive' => true,
             'rewrite' => array('slug' => 'recos'),
+			'supports' => ['title', 'thumbnail'], 
             'show_in_rest' => true,
   
         )
