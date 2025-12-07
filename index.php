@@ -11,10 +11,6 @@
             <?php include('template-parts/partials/hero-type.php');?>
             <?php include('template-parts/partials/floating-elems.php');?>
         </div>
-        <div class="what-we-do">
-            <?php include('template-parts/partials/we-do.php');?>   
-
-        </div>
         <div class="site-content">
             <!-- SECOND NEWS SECTION -->
             <!--<div class="section-2">
@@ -29,14 +25,17 @@
                 <?php //include('template-parts/partials/ticker.php');?>
 
             </div>
+            <div class="what-we-do">
+                <?php include('template-parts/partials/we-do.php');?>   
+            </div>
             <!-- What I'm reading-->
-            <!--<div class="section-4">
-                <h3 class="news-category">What I'm Reading</h3>-->
-                <?php //include('template-parts/partials/category-list.php');?>
+            <div class="section-4">
+                <h3 class="news-category">Recommendations</h3>
+                <?php include('template-parts/partials/rec-section.php');?>
 
-            <!--</div>-->
+            </div>
             <!-- TESTIMONIAL SECTION -->
-            <h3 class="section-test-heading">Testimonials</h3>
+            <!--<h3 class="section-test-heading">Testimonials</h3>-->
             <div class="section-test">
                 <!-- Testimonial ID 20 -->
                 <!-- -->

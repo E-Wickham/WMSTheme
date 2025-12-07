@@ -1275,6 +1275,26 @@ body {
     text-align: center;
 }
 
+
+
+/* recommendation section */
+
+.rec-posts {
+    display: flex;
+}
+
+
+.section-4 .news-category {
+    padding: 1rem;
+}
+
+
+
+
+
+
+
+
 @media (min-width: 600px) {
     .menu-links {
         display: flex;
