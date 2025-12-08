@@ -375,7 +375,7 @@ h3.news-category {
     align-items: center;
 }
 
-.moreBtn, .loginBtn, .project-link {
+.moreBtn, .loginBtn, .project-link  {
     padding: 1rem;
     border: 1px solid #cacaca;
     margin: 1rem auto;
@@ -1288,11 +1288,30 @@ body {
     padding: 1rem;
 }
 
+.rec-story header {
+    color: var(--font-light);
+}
 
+.share-btn-reco {
+    border: 2px solid var(--bg-dark);
+    padding: 1.5rem;
+    font-size: 1.5rem;
+    font-weight: 600;
+    text-align: center;
+    margin-top:0.5rem;
+    border-radius: 0.25rem;
+}
 
+.share-btn-reco:hover {
+    background-color: var(--light-blue);
+    color: var(--font-light);
+    cursor: pointer;
+    transition: 0.3s;
+}
 
-
-
+.share-btn-reco:active {
+    transform: translateY(2px);
+}
 
 
 @media (min-width: 600px) {

@@ -11,7 +11,7 @@
         $fqueryArgs = array( 
                 'posts_per_page' => 10, 
                 'offset' => 0, 
-                'post_type' => "Recommendations");
+                'post_type' => "v2-reco");
         $blogposts = new WP_Query ( $fqueryArgs );
         while ( $blogposts->have_posts() ) :	
                 $blogposts->the_post();

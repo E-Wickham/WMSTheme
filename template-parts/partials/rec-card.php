@@ -23,7 +23,7 @@
         //Custom Fields
         $recFields = get_fields($postID);
         $recAuth = $recFields["author"];
-        $recImg = $recFields["screenshot"];
+        $recImg = get_the_post_thumbnail_url();
         $recPub = $recFields["rec_pub"];
         ?>
 
