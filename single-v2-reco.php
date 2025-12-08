@@ -14,7 +14,7 @@ $recPub = $recFields["publication"];
         <script>
             /*redirect function*/
                 window.onload = function() {
-                    setTimeout( function(){ window.location.replace(<?php  echo '"'.$recURL.'"'; ?>)},500);          
+                    setTimeout( function(){ window.location.replace(<?php  echo '"'.$recURL.'"'; ?>)},1000);          
                 }
         </script>
     <?php } 
