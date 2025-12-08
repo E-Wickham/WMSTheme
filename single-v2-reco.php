@@ -7,9 +7,8 @@
 $postID = $post->ID;
 $recFields = get_fields($postID);
 $recAuth = $recFields["author"];
-$recURL = $recFields["rec_url"];
-$recImg = $recFields["screenshot"];
-$recPub = $recFields["rec_pub"];
+$recURL = $recFields["url"];
+$recPub = $recFields["publication"];
 
     if ($recURL != NULL) { ?>
         <script>
