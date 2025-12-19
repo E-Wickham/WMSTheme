@@ -1139,6 +1139,46 @@ a.vid-link {
     opacity: 0;
 }
 
+.story-redir-btn {
+    text-decoration: none;
+}
+.story-redir-btn h4{
+    padding: 1rem;
+    background-color: var(--navy);
+    text-decoration: none;
+    color: var(--font-light);
+    font-weight: 600;
+    font-size:3rem;
+    border-radius: 0.25rem;
+    transition: 0.4s;
+    margin: 0.5rem 0;
+}
+
+.story-redir-btn h4:hover {
+    background-color: var(--green);
+    transform: scale(1.05);
+}
+.story-redir-btn h4:active {
+    transform: translateY(2px);
+}
+
+.redir-img img {
+    max-width: 100%;
+    border-radius: 0.25rem;
+
+}
+
+.single-entry-grid.redir {
+    display: block;
+    width: auto;
+}
+.entry-title.redir {
+    -webkit-line-clamp: 5;
+    line-clamp: 5;
+}
+
+
+
 @-webkit-keyframes flip-in-hor-bottom {
     0% {
       -webkit-transform: rotateX(80deg);
